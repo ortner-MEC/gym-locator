@@ -124,6 +124,24 @@ class ReportGenerator:
         if access.get('transport_types'):
             print(f"   Nahverkehr: {', '.join(access['transport_types'])}")
         
+        # Fotocasa Rental Data
+        rental = analysis_data.get('rental_market', {})
+        if rental and rental.get('available'):
+            print("\n" + "-" * 70)
+            print(f"🏠 MIETMARKT-ANALYSE (Fotocasa):")
+            print(f"   Objekte gefunden: {rental.get('properties_found', 0)}")
+            print(f"   Durchschnittspreis: {rental.get('average_price_per_m2', 0)}€/m²")
+            print(f"   {rental.get('market_rating', 'N/A')}")
+            print(f"\n   Geschätzte Monatsmiete (350m²): {rental.get('monthly_estimate_350m2', 0):,}€")
+            
+            if rental.get('suitable_properties'):
+                print(f"\n   Passende Objekte:")
+                for prop in rental['suitable_properties'][:3]:
+                    print(f"      • {prop['size']}m² - {prop['price_per_m2']}€/m² = {prop['price']:,.0f}€/Monat")
+            
+            if rental.get('note'):
+                print(f"\n   ℹ️  {rental.get('note')}")
+        
         # Risks & Opportunities
         print("\n" + "-" * 70)
         if score_data.get('risk_factors'):
