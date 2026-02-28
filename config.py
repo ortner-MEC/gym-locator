@@ -9,6 +9,9 @@ GOOGLE_DISTANCE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')  # Same key works f
 IDEALISTA_API_KEY = os.getenv('IDEALISTA_API_KEY')
 IDEALISTA_API_SECRET = os.getenv('IDEALISTA_API_SECRET')
 
+# Fotocasa API Configuration (alternative, optional)
+FOTOCASA_API_KEY = os.getenv('FOTOCASA_API_KEY')
+
 # Default Search Parameters
 DEFAULT_RADIUS_METERS = 2000  # 2km search radius
 MAX_COMPETITORS = 10  # Number of competing gyms to analyze

@@ -9,6 +9,7 @@ from modules.places_api import PlacesAPI
 from modules.ine_api import INEAPI
 from modules.ine_postal import INEPostalCodeAPI
 from modules.travel_time import TravelTimeAnalyzer
+from modules.fotocasa_api import FotocasaAPI
 from modules.scoring import LocationScorer
 from modules.report import ReportGenerator
 from config import DEFAULT_RADIUS_METERS, GOOGLE_PLACES_API_KEY
@@ -115,6 +116,19 @@ def analyze_location(address: str, radius: int = DEFAULT_RADIUS_METERS):
             print(f"   Zielgruppe (20-39): {p_demo.get('young_percentage', 0)}%")
             print(f"   PLZ ist {'Zentrum' if postal_data.get('is_central') else 'Peripherie'}")
     
+    # NEW: Fotocasa rental market analysis
+    print("\n🏠 Analysiere Mietmarkt (Fotocasa)...")
+    fotocasa = FotocasaAPI()
+    rental_data = fotocasa.analyze_rental_market(lat, lng)
+    
+    if rental_data['available']:
+        print(f"   Objekte gefunden: {rental_data['properties_found']}")
+        print(f"   Durchschnitt: {rental_data['average_price_per_m2']}€/m²")
+        print(f"   Schätzung 350m²: {rental_data['monthly_estimate_350m2']}€/Monat")
+        print(f"   Bewertung: {rental_data['market_rating']}")
+    else:
+        print("   Keine Daten verfügbar")
+    
     # Compile data
     analysis_data = {
         'competition': competition,
@@ -123,6 +137,7 @@ def analyze_location(address: str, radius: int = DEFAULT_RADIUS_METERS):
         'travel_analysis': travel_analysis,
         'ine_demographics': ine_data,
         'postal_code_data': postal_data,
+        'rental_market': rental_data,
         'coordinates': {'lat': lat, 'lng': lng}
     }
     
