@@ -1,5 +1,7 @@
 """Google Places API wrapper for gym location analysis."""
-import requests
+import urllib.request
+import urllib.error
+import urllib.parse
 import json
 from typing import List, Dict, Optional
 from config import GOOGLE_PLACES_API_KEY, PLACE_TYPES
@@ -9,15 +11,38 @@ BASE_URL = 'https://places.googleapis.com/v1/places'
 class PlacesAPI:
     def __init__(self, api_key: str = GOOGLE_PLACES_API_KEY):
         self.api_key = api_key
-        self.headers = {
-            'Content-Type': 'application/json',
-            'X-Goog-Api-Key': api_key,
-            'X-Goog-FieldMask': 'places.id,places.displayName,places.location,places.types,places.rating,places.userRatingCount,places.businessStatus'
-        }
+
+    def _make_request(self, url: str, data: dict = None, headers: dict = None) -> dict:
+        """Make HTTP request and return JSON response."""
+        req = urllib.request.Request(url, method='POST' if data else 'GET')
+        
+        if headers:
+            for key, value in headers.items():
+                req.add_header(key, value)
+        
+        if data:
+            req.add_header('Content-Type', 'application/json')
+            req.data = json.dumps(data).encode('utf-8')
+        
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                return json.loads(response.read().decode('utf-8'))
+        except urllib.error.HTTPError as e:
+            error_body = e.read().decode('utf-8')
+            print(f"HTTP Error {e.code}: {error_body}")
+            return {}
+        except Exception as e:
+            print(f"Request error: {e}")
+            return {}
 
     def search_nearby(self, lat: float, lng: float, radius: int, place_types: List[str]) -> List[Dict]:
         """Search for places near a location."""
         url = f'{BASE_URL}:searchNearby'
+        
+        headers = {
+            'X-Goog-Api-Key': self.api_key,
+            'X-Goog-FieldMask': 'places.id,places.displayName,places.location,places.types,places.rating,places.userRatingCount,places.businessStatus'
+        }
         
         body = {
             'locationRestriction': {
@@ -30,32 +55,25 @@ class PlacesAPI:
             'maxResultCount': 20
         }
         
-        try:
-            response = requests.post(url, headers=self.headers, json=body)
-            response.raise_for_status()
-            data = response.json()
-            return data.get('places', [])
-        except requests.exceptions.RequestException as e:
-            print(f"Error fetching places: {e}")
-            return []
+        data = self._make_request(url, body, headers)
+        return data.get('places', [])
 
     def geocode_address(self, address: str) -> Optional[tuple]:
         """Convert address to coordinates using Geocoding API."""
-        url = 'https://maps.googleapis.com/maps/api/geocode/json'
-        params = {
-            'address': address,
-            'key': self.api_key
-        }
+        encoded_address = urllib.parse.quote(address)
+        url = f'https://maps.googleapis.com/maps/api/geocode/json?address={encoded_address}&key={self.api_key}'
         
         try:
-            response = requests.get(url, params=params)
-            data = response.json()
-            if data['status'] == 'OK':
-                location = data['results'][0]['geometry']['location']
-                return (location['lat'], location['lng'])
-            else:
-                print(f"Geocoding error: {data['status']}")
-                return None
+            req = urllib.request.Request(url)
+            with urllib.request.urlopen(req, timeout=30) as response:
+                data = json.loads(response.read().decode('utf-8'))
+                
+                if data['status'] == 'OK':
+                    location = data['results'][0]['geometry']['location']
+                    return (location['lat'], location['lng'])
+                else:
+                    print(f"Geocoding error: {data['status']}")
+                    return None
         except Exception as e:
             print(f"Error geocoding: {e}")
             return None
@@ -73,7 +91,7 @@ class PlacesAPI:
             'competitors': competitors,
             'average_rating': round(avg_rating, 1),
             'highly_rated_count': highly_rated,
-            'density_score': max(0, 100 - (total_competitors * 15)),  # 0 gyms = 100pts, 6+ gyms = 10pts
+            'density_score': max(0, 100 - (total_competitors * 15)),
         }
 
     def analyze_target_demographics(self, lat: float, lng: float, radius: int) -> Dict:

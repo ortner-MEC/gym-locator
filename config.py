@@ -5,16 +5,21 @@ import os
 GOOGLE_PLACES_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')
 GOOGLE_DISTANCE_API_KEY = os.getenv('GOOGLE_PLACES_API_KEY')  # Same key works for both
 
+# Idealista API Configuration (optional)
+IDEALISTA_API_KEY = os.getenv('IDEALISTA_API_KEY')
+IDEALISTA_API_SECRET = os.getenv('IDEALISTA_API_SECRET')
+
 # Default Search Parameters
 DEFAULT_RADIUS_METERS = 2000  # 2km search radius
 MAX_COMPETITORS = 10  # Number of competing gyms to analyze
 
 # Scoring Weights (must sum to 1.0)
 WEIGHTS = {
-    'competition_density': 0.30,    # Less competition = better
-    'target_demographics': 0.25,    # Offices, residences nearby
-    'accessibility': 0.25,          # Public transport, parking
-    'market_saturation': 0.20,      # Gyms per capita in area
+    'competition_density': 0.25,    # Less competition = better
+    'target_demographics': 0.20,    # Offices, residences nearby
+    'accessibility': 0.20,          # Public transport, parking
+    'market_saturation': 0.15,      # Gyms per capita in area
+    'reachability': 0.20,           # Travel time coverage
 }
 
 # Place Types for Analysis

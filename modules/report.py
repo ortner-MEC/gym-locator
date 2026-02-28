@@ -32,6 +32,7 @@ class ReportGenerator:
         print(f"   👥 Zielgruppen-Score:      {scores['demographics']}/100")
         print(f"   🚗 Erreichbarkeit:         {scores['accessibility']}/100")
         print(f"   📈 Markt-Sättigung:        {scores['market_saturation']}/100")
+        print(f"   ⏱️  Reichweite (Fahrzeit): {scores['reachability']}/100")
         
         # Competition Details
         comp = analysis_data.get('competition', {})
@@ -43,24 +44,81 @@ class ReportGenerator:
         
         if comp.get('competitors'):
             print("\n   Konkurrenten:")
-            for gym in comp['competitors'][:5]:  # Show top 5
+            for gym in comp['competitors'][:5]:
                 name = gym.get('displayName', {}).get('text', 'Unbekannt')
                 rating = gym.get('rating', '-')
                 print(f"      • {name} ({rating}★)")
         
-        # Demographics
+        # NEW: Travel Time Analysis
+        travel = analysis_data.get('travel_analysis', {})
+        if travel:
+            print("\n" + "-" * 70)
+            print(f"⏱️  FAHRZEIT-ISOCHRONEN:")
+            
+            walking = travel.get('walking', {})
+            if walking:
+                print(f"\n   ZU FUSS erreichbar:")
+                print(f"      5 Minuten:  {walking.get('5min_reach', 0)} Zonen")
+                print(f"      10 Minuten: {walking.get('10min_reach', 0)} Zonen")
+                print(f"      15 Minuten: {walking.get('15min_reach', 0)} Zonen")
+                print(f"      ↳ Geschätzte Bevölkerung (10min): {walking.get('estimated_population_10min', 0):,}")
+                print(f"      ↳ Abdeckung: {walking.get('coverage_percentage', 0)}%")
+            
+            driving = travel.get('driving', {})
+            if driving:
+                print(f"\n   MIT AUTO erreichbar:")
+                print(f"      5 Minuten:  {driving.get('5min_reach', 0)} Zonen")
+                print(f"      10 Minuten: {driving.get('10min_reach', 0)} Zonen")
+                print(f"      ↳ Geschätzte Bevölkerung (10min): {driving.get('estimated_population_10min', 0):,}")
+        
+        # Google Demographics
         demo = analysis_data.get('demographics', {})
         print("\n" + "-" * 70)
-        print(f"👥 ZIELGRUPPEN-ANALYSE:")
+        print(f"👥 ZIELGRUPPEN-ANALYSE (Google Places):")
         print(f"   Wohngebiete:     {demo.get('residential_count', 0)}")
         print(f"   Bürogebäude:     {demo.get('office_count', 0)}")
         print(f"   Bildungseinrichtungen: {demo.get('young_count', 0)}")
         print(f"   Primäre Zielgruppe: {demo.get('primary_target', 'unbekannt')}")
         
+        # INE Demographics
+        ine = analysis_data.get('ine_demographics', {})
+        if ine.get('municipality_code'):
+            ine_demo = ine.get('demographics', {})
+            ine_scores = ine.get('scores', {})
+            print("\n" + "-" * 70)
+            print(f"🇪🇸 OFFIZIELLE INE-DATEN (Spanien):")
+            print(f"   Stadt: {ine.get('city', 'Unbekannt')}")
+            print(f"   Bevölkerung gesamt: {ine_demo.get('total_population', 0):,}")
+            print(f"   Zielgruppe (20-39J): {ine_demo.get('young_percentage', 0)}% ({ine_demo.get('population_young_20_39', 0):,} Personen)")
+            print(f"   Einkommensindex: {ine_demo.get('income_index', 100)} (100 = Durchschnitt Spanien)")
+            print(f"\n   INE-Scores:")
+            print(f"      Zielgruppen-Score:       {ine_scores.get('target_group_score', 0)}/100")
+            print(f"      Kaufkraft-Score:         {ine_scores.get('purchasing_power_score', 0)}/100")
+            print(f"      Marktgrößen-Score:       {ine_scores.get('market_size_score', 0)}/100")
+            print(f"      Gesamtdemografie-Score:  {ine_scores.get('overall_demographic_score', 0)}/100")
+        
+        # NEW: Postal Code Data
+        postal = analysis_data.get('postal_code_data', {})
+        if postal and postal.get('demographics'):
+            print("\n" + "-" * 70)
+            print(f"📮 PLZ-SPEZIFISCHE DATEN:")
+            print(f"   Postleitzahl: {postal.get('postal_code', 'N/A')}")
+            print(f"   Provinz: {postal.get('province', 'Unknown')}")
+            print(f"   Lage: {'ZENTRAL (High-Traffic)' if postal.get('is_central') else 'Peripher'}")
+            print(f"   Urbane Klassifikation: {'Großstadt' if postal.get('is_urban') else 'Provinz'}")
+            
+            p_demo = postal.get('demographics', {})
+            print(f"\n   Geschätzte Bevölkerung: {p_demo.get('estimated_population', 0):,}")
+            print(f"   Zielgruppe (20-39J): {p_demo.get('young_percentage', 0)}%")
+            print(f"   Einkommensindex: {p_demo.get('income_index', 100)}")
+            
+            if postal.get('notes'):
+                print(f"\n   ℹ️  {postal.get('notes')}")
+        
         # Accessibility
         access = analysis_data.get('accessibility', {})
         print("\n" + "-" * 70)
-        print(f"🚗 ERREICHBARKEIT:")
+        print(f"🚗 ERREICHBARKEIT (ÖPNV/Parken):")
         print(f"   ÖPNV-Haltestellen: {access.get('public_transport_count', 0)}")
         print(f"   Parkplätze:        {access.get('parking_count', 0)}")
         if access.get('transport_types'):

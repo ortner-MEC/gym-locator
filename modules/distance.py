@@ -1,5 +1,7 @@
 """Google Distance Matrix API for accessibility analysis."""
-import requests
+import urllib.request
+import urllib.parse
+import json
 from typing import List, Dict, Tuple
 from config import GOOGLE_DISTANCE_API_KEY
 
@@ -15,7 +17,6 @@ class DistanceAPI:
         if not destinations:
             return {'reachable_count': 0, 'average_time': 0}
         
-        # Batch destinations (max 25 per request)
         dest_strings = [f"{lat},{lng}" for lat, lng in destinations[:25]]
         origins = f"{origin_lat},{origin_lng}"
         
@@ -27,22 +28,25 @@ class DistanceAPI:
         }
         
         try:
-            response = requests.get(self.base_url, params=params)
-            data = response.json()
+            query_string = urllib.parse.urlencode(params)
+            url = f"{self.base_url}?{query_string}"
+            
+            req = urllib.request.Request(url)
+            with urllib.request.urlopen(req, timeout=30) as response:
+                data = json.loads(response.read().decode('utf-8'))
             
             if data['status'] != 'OK':
                 return {'reachable_count': 0, 'average_time': 0, 'error': data['status']}
             
             elements = data['rows'][0]['elements']
             
-            # Count reachable within 15 minutes (walking)
             reachable = 0
             times = []
             for elem in elements:
                 if elem['status'] == 'OK':
                     duration_mins = elem['duration']['value'] / 60
                     times.append(duration_mins)
-                    if duration_mins <= 15:  # Within 15 min walking
+                    if duration_mins <= 15:
                         reachable += 1
             
             return {
