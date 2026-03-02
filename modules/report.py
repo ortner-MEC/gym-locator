@@ -50,6 +50,22 @@ class ReportGenerator:
         print(f"   Gut bewertete Gyms (≥4★): {comp.get('highly_rated_count', 0)}")
         print(f"   Marktsättigung: {comp.get('market_saturation', 'unbekannt').upper()}")
         
+        if comp.get('market_metrics'):
+            metrics = comp['market_metrics']
+            print(f"\n   📊 MARKTANALYSE:")
+            print(f"      Geschätzte Bevölkerung (2km): {metrics.get('population_estimate', 'N/A'):,}")
+            print(f"      Gyms pro 1.000 Einwohner: {metrics.get('gyms_per_1000', 'N/A')}")
+            print(f"      Einwohner pro Gym: {metrics.get('people_per_gym', 'N/A')}")
+            print(f"      Marktdurchdringung: {metrics.get('market_penetration_percent', 'N/A')}%")
+            print(f"      Marktpotenzial: {metrics.get('market_potential', 'N/A')}/100")
+            print(f"      Geschätzte durchschnittliche Gym-Größe: {metrics.get('avg_gym_size_estimate', 'N/A')}")
+            print(f"      Potenzielle SmartGym-Mitglieder: ~{metrics.get('smartgym_potential_members', 'N/A')}")
+            
+            if metrics.get('market_gap') == 'positive':
+                print(f"      ✅ Marktlücke erkannt!")
+            else:
+                print(f"      ⚠️  Markt gesättigt")
+        
         if comp.get('competitors'):
             print("\n   🏋️ Echte Konkurrenten (mit Distanz):")
             for gym in comp['competitors'][:5]:

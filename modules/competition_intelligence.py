@@ -165,7 +165,7 @@ class CompetitionIntelligence:
         
         return base
     
-    def filter_real_competition(self, places: List[Dict]) -> Dict:
+    def filter_real_competition(self, places: List[Dict], population: int = None) -> Dict:
         """Filter and categorize all found places with distance analysis."""
         analyzed = []
         
@@ -229,7 +229,86 @@ class CompetitionIntelligence:
             'avg_distance_m': round(avg_distance, 0) if avg_distance else None,
             'closest_competitor': closest,
             'density_score': distance_weighted_score,
-            'market_saturation': 'high' if real_count >= 5 else 'medium' if real_count >= 2 else 'low'
+            'market_saturation': market_metrics['saturation_level'],
+            'gyms_per_1000': market_metrics['gyms_per_1000'],
+            'people_per_gym': market_metrics['people_per_gym'],
+            'market_potential': market_metrics['market_potential'],
+            'estimated_gym_capacity': market_metrics['estimated_capacity_per_gym'],
+            'market_metrics': market_metrics
+        }
+    
+    def _calculate_market_metrics(self, gym_count: int, population: int, competitors: List[Dict]) -> Dict:
+        """Calculate market saturation metrics based on population and gym count."""
+        # Default population estimate if not provided (2km radius in suburban area)
+        if not population:
+            # Rough estimate: 2000 people per km² in suburban Spain, 12.5 km² = ~25,000
+            population = 25000
+        
+        # Gyms per 1000 inhabitants
+        if population > 0:
+            gyms_per_1000 = (gym_count / population) * 1000
+            people_per_gym = population / gym_count if gym_count > 0 else float('inf')
+        else:
+            gyms_per_1000 = 0
+            people_per_gym = float('inf')
+        
+        # Estimate gym capacity (average gym has ~500 members, ~300 active)
+        estimated_total_capacity = gym_count * 300
+        market_penetration = (estimated_total_capacity / population) * 100 if population > 0 else 0
+        
+        # Market potential score
+        # Ideal: 1 gym per 3000-5000 people
+        # Oversaturated: >1 gym per 2000 people
+        # Underserved: <1 gym per 8000 people
+        if gym_count == 0:
+            market_potential = 100  # Blue ocean!
+            saturation_level = 'none'
+        elif people_per_gym < 2000:
+            market_potential = 10   # Oversaturated
+            saturation_level = 'oversaturated'
+        elif people_per_gym < 3500:
+            market_potential = 40   # High competition
+            saturation_level = 'high'
+        elif people_per_gym < 6000:
+            market_potential = 70   # Moderate
+            saturation_level = 'medium'
+        else:
+            market_potential = 90   # Good potential
+            saturation_level = 'low'
+        
+        # Calculate average gym size estimate based on reviews (proxy for size)
+        # More reviews = bigger gym typically
+        total_reviews = sum(c.get('user_ratings', 0) for c in competitors)
+        avg_reviews = total_reviews / gym_count if gym_count > 0 else 0
+        
+        # Rough size estimate
+        if avg_reviews > 200:
+            avg_gym_size = 'large'  # >1000m²
+            estimated_capacity_per_gym = 400
+        elif avg_reviews > 50:
+            avg_gym_size = 'medium'  # 500-1000m²
+            estimated_capacity_per_gym = 300
+        else:
+            avg_gym_size = 'small'  # <500m²
+            estimated_capacity_per_gym = 150
+        
+        # SmartGym target capacity
+        smartgym_capacity = 600  # 350m², 24/7, automated
+        potential_members = min(smartgym_capacity, people_per_gym * 0.1) if gym_count > 0 else smartgym_capacity
+        
+        return {
+            'population_estimate': population,
+            'gym_count': gym_count,
+            'gyms_per_1000': round(gyms_per_1000, 2),
+            'people_per_gym': int(people_per_gym) if people_per_gym != float('inf') else 'N/A',
+            'market_penetration_percent': round(market_penetration, 1),
+            'market_potential': market_potential,
+            'saturation_level': saturation_level,
+            'avg_gym_size_estimate': avg_gym_size,
+            'avg_reviews_per_gym': int(avg_reviews),
+            'estimated_capacity_per_gym': estimated_capacity_per_gym,
+            'smartgym_potential_members': int(potential_members),
+            'market_gap': 'positive' if market_potential > 60 else 'saturated'
         }
     
     def generate_explanation(self, result: Dict) -> List[str]:

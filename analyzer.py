@@ -62,9 +62,13 @@ def analyze_location(address: str, radius: int = DEFAULT_RADIUS_METERS):
     if postal_code:
         print(f"   Postleitzahl erkannt: {postal_code}")
     
-    # Run Google Places analyses
+    # Estimate population from walking reachability
+    # 2km radius, average suburban density ~2000 people/km² in Spain
+    estimated_population = 25000  # Default
+    
+    # Run Google Places analyses with population estimate
     print("\n🏢 Analysiere Konkurrenz...")
-    competition = places.analyze_competition(lat, lng, radius)
+    competition = places.analyze_competition(lat, lng, radius, population=estimated_population)
     print(f"   {competition['count']} Gyms gefunden")
     
     print("\n👥 Analysiere Zielgruppen (Google Places)...")

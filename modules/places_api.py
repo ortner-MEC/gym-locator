@@ -78,15 +78,15 @@ class PlacesAPI:
             print(f"Error geocoding: {e}")
             return None
 
-    def analyze_competition(self, lat: float, lng: float, radius: int) -> Dict:
+    def analyze_competition(self, lat: float, lng: float, radius: int, population: int = None) -> Dict:
         """Analyze fitness competition in area with intelligent filtering and distance weighting."""
         from modules.competition_intelligence import CompetitionIntelligence
         
         competitors = self.search_nearby(lat, lng, radius, PLACE_TYPES['competitors'])
         
-        # Use AI-based filtering with distance calculation
+        # Use AI-based filtering with distance calculation and population metrics
         intelligence = CompetitionIntelligence(origin_lat=lat, origin_lng=lng)
-        filtered = intelligence.filter_real_competition(competitors)
+        filtered = intelligence.filter_real_competition(competitors, population=population)
         
         return {
             'count': filtered['real_count'],
@@ -99,7 +99,11 @@ class PlacesAPI:
             'avg_distance_m': filtered.get('avg_distance_m'),
             'closest_competitor': filtered.get('closest_competitor'),
             'density_score': filtered['density_score'],
+            'gyms_per_1000': filtered.get('gyms_per_1000'),
+            'people_per_gym': filtered.get('people_per_gym'),
+            'market_potential': filtered.get('market_potential'),
             'market_saturation': filtered['market_saturation'],
+            'market_metrics': filtered.get('market_metrics'),
             'filtering_explanation': intelligence.generate_explanation(filtered)
         }
 
