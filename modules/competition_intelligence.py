@@ -1,8 +1,9 @@
-"""Smart competition intelligence using Google Place Details + Review analysis."""
+"""Smart competition intelligence using Google Place Details + Review + Website analysis."""
 import math
 import json
 import urllib.request
 import urllib.error
+import re
 from typing import Dict, List, Optional
 from config import GOOGLE_PLACES_API_KEY
 
@@ -97,8 +98,39 @@ class CompetitionIntelligence:
         a = math.sin(dp/2)**2 + math.cos(p1)*math.cos(p2)*math.sin(dl/2)**2
         return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
+    # Website analysis keywords
+    WEBSITE_GYM_KEYWORDS = [
+        # Equipment
+        'maquinas', 'máquinas', 'pesas', 'mancuernas', 'barra', 'banco', 'rack',
+        'cinta', 'eliptica', 'elíptica', 'bicicleta', 'cardio', 'musculacion',
+        'musculación', 'aparatos', 'polea', 'cable', 'press', 'sentadilla',
+        'weights', 'dumbbells', 'treadmill', 'machines', 'bench', 'squat',
+        # Access
+        '24h', '24 horas', '24/7', 'acceso 24h', 'abierto 24', 'acceso libre',
+        '24 hours', '24 hour access', 'open 24', 'self-service', 'autoservicio',
+        # Membership
+        'tarifa', 'mensual', 'abono', 'cuota', 'membresia', 'suscripcion',
+        'monthly', 'membership', 'subscription', 'monthly fee',
+        # Services
+        'gimnasio', 'fitness', 'entrenamiento', 'workout', 'strength',
+        'vestuario', 'duchas', 'taquillas', 'locker', 'changing room',
+    ]
+    
+    WEBSITE_NOT_GYM_KEYWORDS = [
+        # Classes that indicate non-24h or niche
+        'clases dirigidas', 'actividades dirigidas', 'monitores', 'profesores',
+        'spinning', 'pilates', 'yoga', 'zumba', 'body pump', 'aqua gym',
+        'natación', 'piscina', 'piscinas', 'swimming',
+        # Personal training focus
+        'entrenamiento personal', 'personal trainer', 'solo con cita',
+        'cita previa', 'appointment only', 'by appointment',
+        # Other
+        'fisioterapia', 'fisio', 'masaje', 'massage', 'spa', 'wellness',
+        'crossfit', 'box de crossfit', 'crossfit box',
+    ]
+    
     def fetch_place_details(self, place_id: str) -> Dict:
-        """Fetch reviews + editorial summary from Google Places API."""
+        """Fetch reviews + editorial summary + website from Google Places API."""
         url = f'https://places.googleapis.com/v1/places/{place_id}'
         headers = {
             'X-Goog-Api-Key': self.api_key,
@@ -115,9 +147,57 @@ class CompetitionIntelligence:
         except Exception as e:
             print(f"   ⚠️ Details-Fehler für {place_id}: {e}")
             return {}
+    
+    def fetch_website_content(self, url: str, timeout: int = 10) -> str:
+        """Fetch and extract text content from a website."""
+        if not url or not url.startswith('http'):
+            return ""
+        
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                }
+            )
+            
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                html = resp.read().decode('utf-8', errors='ignore')
+                
+                # Extract text (simple approach)
+                # Remove scripts and styles
+                html = re.sub(r'<script[^>]*>.*?</script>', ' ', html, flags=re.DOTALL | re.IGNORECASE)
+                html = re.sub(r'<style[^>]*>.*?</style>', ' ', html, flags=re.DOTALL | re.IGNORECASE)
+                
+                # Extract text from common content areas
+                text_parts = []
+                
+                # Look for main content areas
+                for tag in ['main', 'article', 'section', 'div class="content"', 'div id="content"']:
+                    matches = re.findall(rf'<{tag}[^>]*>(.*?)</{tag.split()[0]}>', html, re.DOTALL | re.IGNORECASE)
+                    for match in matches[:2]:  # First 2 matches
+                        text = re.sub(r'<[^>]+>', ' ', match)
+                        text_parts.append(text)
+                
+                # If no content areas found, extract all text
+                if not text_parts:
+                    text = re.sub(r'<[^>]+>', ' ', html)
+                    text_parts.append(text)
+                
+                # Clean and limit
+                full_text = ' '.join(text_parts)
+                full_text = re.sub(r'\s+', ' ', full_text).strip()
+                return full_text[:5000].lower()  # First 5000 chars
+                
+        except urllib.error.HTTPError as e:
+            print(f"   ⚠️ Website HTTP {e.code}: {url[:50]}...")
+            return ""
+        except Exception as e:
+            print(f"   ⚠️ Website-Fehler: {url[:50]}... ({str(e)[:50]})")
+            return ""
 
-    def analyze_reviews(self, details: Dict, place_name: str = '') -> Dict:
-        """Analyze reviews + name to determine what kind of place this really is."""
+    def analyze_content(self, details: Dict, website_text: str, place_name: str = '') -> Dict:
+        """Analyze reviews + website + name to determine what kind of place this really is."""
         reviews = details.get('reviews', [])
         editorial = details.get('editorialSummary', {}).get('text', '')
         primary_type = details.get('primaryType', '')
@@ -137,43 +217,67 @@ class CompetitionIntelligence:
                     'primary_type': primary_type,
                     'primary_type_name': primary_type_name,
                     'website': website, 'has_editorial': bool(editorial),
+                    'has_website_data': bool(website_text),
                 }
         
-        # Combine review text for analysis
+        # Combine all content: reviews + editorial + website
         all_text = editorial.lower() + ' '
         for review in reviews[:5]:
             text = review.get('text', {}).get('text', '')
             all_text += text.lower() + ' '
         
+        # Add website content (if fetched successfully)
+        has_website = bool(website_text)
+        if has_website:
+            all_text += website_text + ' '
+        
         # Also check name for keywords
         name_and_text = name_lower + ' ' + all_text
         
-        # Score gym indicators
-        gym_score = 0
-        gym_matches = []
+        # === REVIEW-BASED SCORING ===
+        review_gym_score = 0
+        review_matches = []
         for kw in self.GYM_REVIEW_KEYWORDS:
             if kw in all_text:
-                gym_score += 1
-                gym_matches.append(kw)
+                review_gym_score += 1
+                review_matches.append(kw)
         
-        # Strong indicators in name OR reviews
+        # === WEBSITE-BASED SCORING (higher weight!) ===
+        website_gym_score = 0
+        website_matches = []
+        if has_website:
+            for kw in self.WEBSITE_GYM_KEYWORDS:
+                if kw in website_text:
+                    website_gym_score += 2  # Higher weight for website
+                    website_matches.append(f"web:{kw}")
+            
+            # 24h access on website is STRONG signal
+            if any(x in website_text for x in ['24h', '24 horas', '24/7', 'abierto 24']):
+                website_gym_score += 5
+                website_matches.append("⭐web:24h-access")
+        
+        # === COMBINED SCORING ===
+        gym_score = review_gym_score + website_gym_score
+        gym_matches = review_matches[:3] + website_matches[:3]
+        
+        # Strong indicators in name
         for kw in self.STRONG_GYM_INDICATORS:
             if kw in name_and_text:
                 gym_score += 3
                 gym_matches.append(f"⭐{kw}")
         
-        # Name contains "gym" or "gimnasio" → strong signal
+        # Name contains "gym" or "gimnasio"
         if any(w in name_lower for w in ['gym', 'gimnasio', 'fitness']):
             gym_score += 3
             gym_matches.append('⭐name:gym/gimnasio/fitness')
         
-        # Name whitelist (known gym brands/patterns)
+        # Name whitelist
         for wl in self.NAME_WHITELIST:
             if wl in name_lower:
                 gym_score += 4
                 gym_matches.append(f'⭐name:{wl}')
         
-        # Score non-gym indicators
+        # === NON-GYM SCORING ===
         not_gym_score = 0
         not_gym_matches = []
         for kw in self.NOT_GYM_KEYWORDS:
@@ -181,39 +285,49 @@ class CompetitionIntelligence:
                 not_gym_score += 1
                 not_gym_matches.append(kw)
         
+        # Website non-gym signals
+        if has_website:
+            for kw in self.WEBSITE_NOT_GYM_KEYWORDS:
+                if kw in website_text:
+                    not_gym_score += 2
+                    not_gym_matches.append(f"web:{kw}")
+        
         # Primary type bonus
         if primary_type in ('gym', 'fitness_center', 'health_club'):
             gym_score += 3
         elif primary_type in ('yoga_studio', 'swimming_pool', 'sports_complex', 'stadium'):
             not_gym_score += 3
         
-        # Determine category
+        # === DETERMINE CATEGORY ===
         net_score = gym_score - not_gym_score
         
-        # CrossFit special case: different business model, only indirect competition
+        # CrossFit special case
         is_crossfit = 'crossfit' in name_lower or 'crossfit' in all_text
         
         if is_crossfit:
             category = 'possible_competitor'
             confidence = 60
-        elif net_score >= 3:
+        elif net_score >= 5:
             category = 'direct_competitor'
-            confidence = min(100, 50 + net_score * 10)
-        elif net_score >= 1:
+            confidence = min(100, 60 + net_score * 8)
+        elif net_score >= 2:
             category = 'possible_competitor'
-            confidence = 40 + net_score * 10
-        elif net_score <= -2:
+            confidence = 50 + net_score * 10
+        elif net_score <= -3:
             category = 'not_competition'
-            confidence = min(100, 50 + abs(net_score) * 10)
+            confidence = min(100, 60 + abs(net_score) * 8)
+        elif net_score <= -1:
+            category = 'unclear'
+            confidence = 40
         else:
             category = 'unclear'
             confidence = 30
         
-        # If no reviews at all, use name-based fallback with lower confidence
-        if not reviews and not editorial:
+        # Fallback if no data at all
+        if not reviews and not editorial and not website_text:
             if gym_score > 0:
                 category = 'possible_competitor'
-                confidence = 25
+                confidence = 20
             else:
                 category = 'no_data'
                 confidence = 10
@@ -227,6 +341,7 @@ class CompetitionIntelligence:
             'gym_matches': gym_matches[:5],
             'not_gym_matches': not_gym_matches[:3],
             'review_count': len(reviews),
+            'has_website_data': has_website,
             'primary_type': primary_type,
             'primary_type_name': primary_type_name,
             'website': website,
@@ -252,16 +367,26 @@ class CompetitionIntelligence:
             if plat and plng and self.origin_lat and self.origin_lng:
                 dist_m = self._haversine(self.origin_lat, self.origin_lng, plat, plng)
             
-            # Fetch details + reviews
+            # Fetch details + reviews + website
             details = self.fetch_place_details(place_id) if place_id else {}
-            review_analysis = self.analyze_reviews(details, place_name=name)
+            
+            # Fetch website content if URL available
+            website_url = details.get('websiteUri', '')
+            website_text = ""
+            if website_url:
+                website_text = self.fetch_website_content(website_url)
+                if website_text:
+                    print(f"      🌐 Website analysiert ({len(website_text)} Zeichen)")
+            
+            review_analysis = self.analyze_content(details, website_text, place_name=name)
             
             cat = review_analysis['category']
             conf = review_analysis['confidence']
             icon = {'direct_competitor': '🏋️', 'possible_competitor': '🤔', 
                     'not_competition': '❌', 'unclear': '❓', 'no_data': '📭'}.get(cat, '❓')
             
-            print(f"   {icon} {name} → {cat} ({conf}% sicher)")
+            web_icon = "🌐" if review_analysis.get('has_website_data') else ""
+            print(f"   {icon} {web_icon} {name} → {cat} ({conf}% sicher)")
             if review_analysis['gym_matches']:
                 print(f"      Gym-Signale: {', '.join(review_analysis['gym_matches'][:3])}")
             if review_analysis['not_gym_matches']:

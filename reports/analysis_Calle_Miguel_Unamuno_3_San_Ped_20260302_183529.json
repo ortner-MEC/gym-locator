@@ -1,0 +1,750 @@
+{
+  "address": "Calle Miguel Unamuno 3, San Pedro del Pinatar",
+  "timestamp": "2026-03-02T18:35:29.874735",
+  "analysis": {
+    "competition": {
+      "total_found": 20,
+      "real_competitors": [
+        {
+          "name": "MK GYM",
+          "rating": 4.6,
+          "review_count": 61,
+          "distance_m": 155.62912219869995,
+          "distance_km": 0.16,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 8,
+            "not_gym_score": 0,
+            "net_score": 8,
+            "gym_matches": [
+              "gym",
+              "workout",
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "The Fitness Factory",
+          "rating": 4.9,
+          "review_count": 39,
+          "distance_m": 530.2851739687637,
+          "distance_km": 0.53,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 7,
+            "not_gym_score": 0,
+            "net_score": 7,
+            "gym_matches": [
+              "gym",
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "https://www.facebook.com/The-Fitness-Factory-148507635300792/",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Pinatar Arena",
+          "rating": 4.3,
+          "review_count": 1018,
+          "distance_m": 1798.6094371677045,
+          "distance_km": 1.8,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 9,
+            "not_gym_score": 3,
+            "net_score": 6,
+            "gym_matches": [
+              "gym",
+              "membership",
+              "⭐arena",
+              "⭐name:arena"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "sports_complex",
+            "primary_type_name": "Sports Complex",
+            "website": "http://pinatararena.com/",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Genesis Gym Club",
+          "rating": 4.6,
+          "review_count": 47,
+          "distance_m": 1941.1755872042745,
+          "distance_km": 1.94,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 14,
+            "not_gym_score": 0,
+            "net_score": 14,
+            "gym_matches": [
+              "machines",
+              "gimnasio",
+              "gym",
+              "⭐bodybuilding",
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          }
+        }
+      ],
+      "real_count": 4,
+      "possible_competitors": [
+        {
+          "name": "C.A.R.",
+          "rating": 4.9,
+          "review_count": 17,
+          "distance_m": 760.3172977580107,
+          "distance_km": 0.76,
+          "category": "possible_competitor",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 90,
+            "gym_score": 4,
+            "not_gym_score": 0,
+            "net_score": 4,
+            "gym_matches": [
+              "gym"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Centro De Yoga Solar",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 1685.7968031175985,
+          "distance_km": 1.69,
+          "category": "possible_competitor",
+          "confidence": 20,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 20,
+            "gym_score": 3,
+            "not_gym_score": 1,
+            "net_score": 2,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "yoga"
+            ],
+            "review_count": 0,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Crossfit BeTribe",
+          "rating": 5,
+          "review_count": 33,
+          "distance_m": 1750.8700295457895,
+          "distance_km": 1.75,
+          "category": "possible_competitor",
+          "confidence": 60,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 60,
+            "gym_score": 9,
+            "not_gym_score": 4,
+            "net_score": 5,
+            "gym_matches": [
+              "workout",
+              "membership",
+              "web:tarifa",
+              "web:entrenamiento"
+            ],
+            "not_gym_matches": [
+              "crossfit",
+              "wod",
+              "web:crossfit"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "fitness_center",
+            "primary_type_name": "Fitness center",
+            "website": "https://www.crossfitbetribe.com/",
+            "has_editorial": false
+          }
+        }
+      ],
+      "not_competition": [
+        {
+          "name": "CLUB DE BOXEO PINATAR . SPORTS CENTER 12 ROUNDS",
+          "rating": 5,
+          "review_count": 16,
+          "distance_m": 45.760882857395124,
+          "distance_km": 0.05,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 1,
+            "not_gym_score": 1,
+            "net_score": 0,
+            "gym_matches": [
+              "gym"
+            ],
+            "not_gym_matches": [
+              "boxeo"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "sports_coaching",
+            "primary_type_name": "Sports Coaching",
+            "website": "",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Centro de Entrenamiento FitGirls Studio",
+          "rating": 5,
+          "review_count": 11,
+          "distance_m": 125.31873509054498,
+          "distance_km": 0.13,
+          "category": "not_competition",
+          "confidence": 84,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 84,
+            "gym_score": 13,
+            "not_gym_score": 16,
+            "net_score": -3,
+            "gym_matches": [
+              "máquinas",
+              "machines",
+              "gimnasio",
+              "web:máquinas",
+              "web:gimnasio"
+            ],
+            "not_gym_matches": [
+              "yoga",
+              "pilates",
+              "masaje"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "fitness_center",
+            "primary_type_name": "Fitness center",
+            "website": "https://fitgirlsstudio.com/",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Shala Ahimsa Yoga Studio",
+          "rating": 5,
+          "review_count": 43,
+          "distance_m": 148.42061617843314,
+          "distance_km": 0.15,
+          "category": "not_competition",
+          "confidence": 100,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 100,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "yoga",
+              "dance",
+              "tiro"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "yoga_studio",
+            "primary_type_name": "Yoga Studio",
+            "website": "http://shalahimsa.com/",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Centro Prana yoga",
+          "rating": 4.5,
+          "review_count": 13,
+          "distance_m": 484.33645677841446,
+          "distance_km": 0.48,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 3,
+            "not_gym_score": 2,
+            "net_score": 1,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "yoga",
+              "dance"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Skatepark San Pedro del Pintar",
+          "rating": 4.3,
+          "review_count": 331,
+          "distance_m": 646.5060903148867,
+          "distance_km": 0.65,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:skatepark"
+            ],
+            "review_count": 5,
+            "primary_type": "skateboard_park",
+            "primary_type_name": "Skatepark",
+            "website": "https://www.sanpedrodelpinatar.es/",
+            "has_editorial": false,
+            "has_website_data": false
+          }
+        },
+        {
+          "name": "Centro Deportivo San Pedro",
+          "rating": 4.2,
+          "review_count": 21,
+          "distance_m": 654.036980797242,
+          "distance_km": 0.65,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:centro deportivo"
+            ],
+            "review_count": 5,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false,
+            "has_website_data": false
+          }
+        },
+        {
+          "name": "Marlo studio",
+          "rating": 5,
+          "review_count": 29,
+          "distance_m": 722.7148098820632,
+          "distance_km": 0.72,
+          "category": "not_competition",
+          "confidence": 100,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 100,
+            "gym_score": 0,
+            "not_gym_score": 16,
+            "net_score": -16,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "yoga",
+              "pilates",
+              "masaje"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "yoga_studio",
+            "primary_type_name": "Yoga Studio",
+            "website": "https://www.marlo-studio.com/",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Municipal swimming pool Aqualia",
+          "rating": 4.3,
+          "review_count": 435,
+          "distance_m": 1201.9028041282565,
+          "distance_km": 1.2,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:swimming pool"
+            ],
+            "review_count": 5,
+            "primary_type": "swimming_pool",
+            "primary_type_name": "Swimming Pool",
+            "website": "http://www.cdsanpedrodelpinatar.es/",
+            "has_editorial": false,
+            "has_website_data": true
+          }
+        },
+        {
+          "name": "Circuito Pinatar",
+          "rating": 5,
+          "review_count": 1,
+          "distance_m": 1241.1247961965116,
+          "distance_km": 1.24,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:circuito"
+            ],
+            "review_count": 1,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false,
+            "has_website_data": false
+          }
+        },
+        {
+          "name": "Pabellón Auxiliar \"Cubo\" del Polideportivo Principe de Asturias",
+          "rating": 4.5,
+          "review_count": 63,
+          "distance_m": 1265.9701840931732,
+          "distance_km": 1.27,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:pabellón"
+            ],
+            "review_count": 5,
+            "primary_type": "fitness_center",
+            "primary_type_name": "Fitness center",
+            "website": "https://www.facebook.com/sanpedrodeportes/",
+            "has_editorial": false,
+            "has_website_data": false
+          }
+        },
+        {
+          "name": "Pabellon Municipal Príncipe de Asturias",
+          "rating": 4.2,
+          "review_count": 484,
+          "distance_m": 1290.1758134028705,
+          "distance_km": 1.29,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:pabellon"
+            ],
+            "review_count": 5,
+            "primary_type": "fitness_center",
+            "primary_type_name": "Fitness center",
+            "website": "",
+            "has_editorial": false,
+            "has_website_data": false
+          }
+        },
+        {
+          "name": "San pedro",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 1586.7096019388612,
+          "distance_km": 1.59,
+          "category": "no_data",
+          "confidence": 10,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "no_data",
+            "confidence": 10,
+            "gym_score": 0,
+            "not_gym_score": 3,
+            "net_score": -3,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 0,
+            "has_website_data": false,
+            "primary_type": "sports_complex",
+            "primary_type_name": "Sports Complex",
+            "website": "",
+            "has_editorial": false
+          }
+        },
+        {
+          "name": "Club de tiro Almirante Nuñez",
+          "rating": 4.6,
+          "review_count": 24,
+          "distance_m": 1593.0243524820082,
+          "distance_km": 1.59,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:club de tiro"
+            ],
+            "review_count": 5,
+            "primary_type": "sports_club",
+            "primary_type_name": "Sports Club",
+            "website": "https://clubdetirosanpedro.com/",
+            "has_editorial": false,
+            "has_website_data": true
+          }
+        }
+      ],
+      "average_rating": 4.6,
+      "good_gyms_count": 4,
+      "closest_competitor": {
+        "name": "MK GYM",
+        "rating": 4.6,
+        "review_count": 61,
+        "distance_m": 155.62912219869995,
+        "distance_km": 0.16,
+        "category": "direct_competitor",
+        "confidence": 100,
+        "is_real_competition": true,
+        "analysis": {
+          "category": "direct_competitor",
+          "confidence": 100,
+          "gym_score": 8,
+          "not_gym_score": 0,
+          "net_score": 8,
+          "gym_matches": [
+            "gym",
+            "workout",
+            "⭐name:gym/gimnasio/fitness"
+          ],
+          "not_gym_matches": [],
+          "review_count": 5,
+          "has_website_data": false,
+          "primary_type": "gym",
+          "primary_type_name": "Gym",
+          "website": "",
+          "has_editorial": false
+        }
+      },
+      "avg_distance_m": 1106.4248301348607,
+      "population_estimate": 25000,
+      "people_per_gym": 6250,
+      "market_potential": 70,
+      "saturation": "low",
+      "filtering_explanation": [
+        "Von 20 Einträgen: 4 echte Gyms, 3 möglich, 13 ausgeschlossen",
+        "Nächstes Gym: MK GYM (0.16km)"
+      ],
+      "count": 4
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 50,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 2,
+      "parking_count": 20,
+      "accessibility_score": 100,
+      "transport_types": [
+        "San Pedro del Pinatar",
+        "Lo Pagan"
+      ]
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 3,
+        "10min_reach": 19,
+        "15min_reach": 40,
+        "estimated_population_10min": 3705,
+        "coverage_percentage": 6.6,
+        "average_time": 27.1
+      },
+      "driving": {
+        "5min_reach": 13,
+        "10min_reach": 70,
+        "15min_reach": 72,
+        "estimated_population_10min": 54600
+      },
+      "score": 0
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Spanien",
+          "price": 2025,
+          "size": 250,
+          "price_per_m2": 8.1,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Spanien",
+          "price": 2565,
+          "size": 300,
+          "price_per_m2": 8.55,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Spanien",
+          "price": 3150,
+          "size": 350,
+          "price_per_m2": 9.0,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Spanien",
+          "price": 3780,
+          "size": 400,
+          "price_per_m2": 9.45,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Spanien",
+          "price": 4950,
+          "size": 500,
+          "price_per_m2": 9.9,
+          "location": "Spanien",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 9.0,
+      "monthly_estimate_350m2": 3150,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "coordinates": {
+      "lat": 37.8323348,
+      "lng": -0.7896643
+    }
+  },
+  "score": {
+    "total_score": 73.4,
+    "individual_scores": {
+      "competition": 64.0,
+      "accessibility": 100,
+      "reachability": 84.0,
+      "rental": 50
+    },
+    "rating": "🟢 EXCELLENT",
+    "recommendation": "Hoch empfohlen! Sehr gute Bedingungen für SmartGym.",
+    "risk_factors": [
+      "Gym sehr nah: MK GYM (0.16km)"
+    ],
+    "opportunities": [
+      "Unterversorgter Markt: 6250 Einwohner/Gym",
+      "Gute Parksituation (20 Parkplätze)",
+      "Gute Erreichbarkeit (ÖPNV + Parken)",
+      "Großes Auto-Einzugsgebiet: 54,600 in 10min"
+    ]
+  }
+}
