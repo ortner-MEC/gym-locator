@@ -51,13 +51,27 @@ class ReportGenerator:
         print(f"   Marktsättigung: {comp.get('market_saturation', 'unbekannt').upper()}")
         
         if comp.get('competitors'):
-            print("\n   🏋️ Echte Konkurrenten:")
+            print("\n   🏋️ Echte Konkurrenten (mit Distanz):")
             for gym in comp['competitors'][:5]:
                 name = gym.get('name', 'Unbekannt')
                 rating = gym.get('rating', '-')
                 category = gym.get('category', 'unclear')
+                dist_km = gym.get('distance_km', '?')
                 cat_emoji = {'direct_competitor': '🎯', 'indirect_competitor': '⚡'}.get(category, '❓')
-                print(f"      {cat_emoji} {name} ({rating}★)")
+                dist_emoji = '🚨' if gym.get('proximity_score', 0) >= 80 else '⚠️' if gym.get('proximity_score', 0) >= 60 else '📍'
+                print(f"      {cat_emoji} {dist_emoji} {name} ({rating}★) - {dist_km}km")
+        
+        if comp.get('closest_competitor'):
+            closest = comp['closest_competitor']
+            print(f"\n   🔴 Nächster Konkurrent: {closest['name']}")
+            print(f"      Entfernung: {closest['distance_km']}km")
+            print(f"      Bewertung: {closest['rating']}★")
+            if closest['distance_km'] < 0.3:
+                print(f"      ⚠️  WARNUNG: Weniger als 300m entfernt!")
+        
+        if comp.get('avg_distance_m'):
+            avg_km = comp['avg_distance_m'] / 1000
+            print(f"\n   📏 Durchschnittsentfernung: {avg_km:.2f}km")
         
         if comp.get('filtered_out'):
             print("\n   ❌ Ausgeschlossen (keine direkte Konkurrenz):")

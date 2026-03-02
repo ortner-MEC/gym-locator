@@ -79,13 +79,13 @@ class PlacesAPI:
             return None
 
     def analyze_competition(self, lat: float, lng: float, radius: int) -> Dict:
-        """Analyze fitness competition in area with intelligent filtering."""
+        """Analyze fitness competition in area with intelligent filtering and distance weighting."""
         from modules.competition_intelligence import CompetitionIntelligence
         
         competitors = self.search_nearby(lat, lng, radius, PLACE_TYPES['competitors'])
         
-        # Use AI-based filtering
-        intelligence = CompetitionIntelligence()
+        # Use AI-based filtering with distance calculation
+        intelligence = CompetitionIntelligence(origin_lat=lat, origin_lng=lng)
         filtered = intelligence.filter_real_competition(competitors)
         
         return {
@@ -96,6 +96,8 @@ class PlacesAPI:
             'unclear': filtered['unclear'],
             'average_rating': filtered['average_rating'],
             'highly_rated_count': filtered['highly_rated_count'],
+            'avg_distance_m': filtered.get('avg_distance_m'),
+            'closest_competitor': filtered.get('closest_competitor'),
             'density_score': filtered['density_score'],
             'market_saturation': filtered['market_saturation'],
             'filtering_explanation': intelligence.generate_explanation(filtered)
