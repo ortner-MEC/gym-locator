@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartGym Functional Rig - 3D Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #09090b;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        #canvas-container {
+            width: 100%;
+            height: 70vh;
+            position: relative;
+        }
+        
+        #info-panel {
+            padding: 2rem;
+            background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        
+        h1 span {
+            color: #86C1B7;
+        }
+        
+        .subtitle {
+            color: #a1a1aa;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature {
+            background: rgba(134, 193, 183, 0.1);
+            border: 1px solid rgba(134, 193, 183, 0.2);
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+        
+        .feature h3 {
+            color: #86C1B7;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature p {
+            font-size: 0.875rem;
+            color: #d4d4d8;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background: #86C1B7;
+            color: #09090b;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: #86C1B7;
+        }
+        
+        #stats {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0,0,0,0.8);
+            padding: 1rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            color: #86C1B7;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container">
+        <div class="loading">Lädt 3D-Modell...</div>
+        <div id="stats" style="display: none;">
+            <div>↻ Drag zum Drehen</div>
+            <div>🔍 Scroll zum Zoomen</div>
+        </div>
+    </div>
+    
+    <div id="info-panel">
+        <h1>Smart<span>Gym</span> Functional Rig</h1>
+        <p class="subtitle">Professionelles Multi-Station Trainingssystem</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🏃 Monkey Bars</h3>
+                <p>Overhead Traverse für Klimmzüge und Hanging Exercises</p>
+            </div>
+            <div class="feature">
+                <h3>💪 Dip-Station</h3>
+                <p>Parallele Stangen für Dips und Calisthenics</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Sledgehammer Target</h3>
+                <p>Impact-Training für Power und Core</p>
+            </div>
+            <div class="feature">
+                <h3>🪜 Sprossenwand</h3>
+                <p>Stall Bars für Stretching und Kletterübungen</p>
+            </div>
+            <div class="feature">
+                <h3>🏋️ J-Hooks</h3>
+                <p>Verstellbare Langhantel-Ablagen für Squats & Press</p>
+            </div>
+            <div class="feature">
+                <h3>🤸 Gymnastikringe</h3>
+                <p>Suspension Training für funktionelle Kraft</p>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="resetView()">🔄 Reset Ansicht</button>
+            <button onclick="toggleRotation()">▶️ Auto-Rotation</button>
+            <button onclick="changeColor()">🎨 Farbe wechseln</button>
+            <button onclick="explodeView()">💥 Exploded View</button>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // Scene setup
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x09090b);
+        scene.fog = new THREE.Fog(0x09090b, 10, 50);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / (window.innerHeight * 0.7), 0.1, 1000);
+        camera.position.set(8, 6, 8);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight * 0.7);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Remove loading text
+        document.querySelector('.loading').style.display = 'none';
+        document.getElementById('stats').style.display = 'block';
+
+        // Controls
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.maxPolarAngle = Math.PI / 2;
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+        scene.add(ambientLight);
+
+        const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+        dirLight.position.set(5, 10, 5);
+        dirLight.castShadow = true;
+        dirLight.shadow.camera.near = 0.1;
+        dirLight.shadow.camera.far = 50;
+        dirLight.shadow.camera.left = -10;
+        dirLight.shadow.camera.right = 10;
+        dirLight.shadow.camera.top = 10;
+        dirLight.shadow.camera.bottom = -10;
+        scene.add(dirLight);
+
+        const spotLight = new THREE.SpotLight(0x86C1B7, 0.5);
+        spotLight.position.set(-5, 8, -5);
+        spotLight.lookAt(0, 0, 0);
+        scene.add(spotLight);
+
+        // Materials
+        const frameMaterial = new THREE.MeshStandardMaterial({ 
+            color: 0x2a2a2a,
+            roughness: 0.7,
+            metalness: 0.3
+        });
+
+        const orangeMaterial = new THREE.MeshStandardMaterial({ 
+            color: 0xff6b35,
+            roughness: 0.5,
+            metalness: 0.2
+        });
+
+        const accentMaterial = new THREE.MeshStandardMaterial({ 
+            color: 0x86C1B7,
+            roughness: 0.4,
+            metalness: 0.5
+        });
+
+        // Rig Group
+        const rig = new THREE.Group();
+        scene.add(rig);
+
+        // Dimensions
+        const width = 4;
+        const depth = 1.5;
+        const height = 2.8;
+        const postSize = 0.08;
+
+        // Create posts
+        function createPost(x, z) {
+            const geometry = new THREE.BoxGeometry(postSize, height, postSize);
+            const post = new THREE.Mesh(geometry, frameMaterial);
+            post.position.set(x, height/2, z);
+            post.castShadow = true;
+            post.receiveShadow = true;
+            rig.add(post);
+            return post;
+        }
+
+        // Main frame posts
+        const posts = [
+            [-width/2, -depth/2],
+            [width/2, -depth/2],
+            [-width/2, depth/2],
+            [width/2, depth/2]
+        ];
+
+        posts.forEach(([x, z]) => createPost(x, z));
+
+        // Top frame
+        const topFrameGeo = new THREE.BoxGeometry(width, postSize, postSize);
+        const topFrame1 = new THREE.Mesh(topFrameGeo, frameMaterial);
+        topFrame1.position.set(0, height, -depth/2);
+        topFrame1.castShadow = true;
+        rig.add(topFrame1);
+
+        const topFrame2 = topFrame1.clone();
+        topFrame2.position.set(0, height, depth/2);
+        rig.add(topFrame2);
+
+        const topFrameSideGeo = new THREE.BoxGeometry(postSize, postSize, depth);
+        const topFrame3 = new THREE.Mesh(topFrameSideGeo, frameMaterial);
+        topFrame3.position.set(-width/2, height, 0);
+        rig.add(topFrame3);
+
+        const topFrame4 = topFrame3.clone();
+        topFrame4.position.set(width/2, height, 0);
+        rig.add(topFrame4);
+
+        // Monkey bars (ceiling grid)
+        const barCount = 8;
+        for (let i = 0; i < barCount; i++) {
+            const x = -width/2 + (width / (barCount - 1)) * i;
+            const barGeo = new THREE.CylinderGeometry(0.02, 0.02, depth, 8);
+            const bar = new THREE.Mesh(barGeo, frameMaterial);
+            bar.rotation.x = Math.PI / 2;
+            bar.position.set(x, height - 0.1, 0);
+            bar.castShadow = true;
+            rig.add(bar);
+        }
+
+        // Stall bars (ladder wall)
+        const rungCount = 10;
+        for (let i = 0; i < rungCount; i++) {
+            const y = 0.3 + (height - 0.5) / rungCount * i;
+            const rungGeo = new THREE.CylinderGeometry(0.025, 0.025, 0.6, 8);
+            const rung = new THREE.Mesh(rungGeo, frameMaterial);
+            rung.rotation.z = Math.PI / 2;
+            rung.position.set(-width/2 - 0.3, y, 0);
+            rung.castShadow = true;
+            rig.add(rung);
+        }
+
+        // Side posts for stall bars
+        const stallPostGeo = new THREE.BoxGeometry(0.06, height, 0.06);
+        const stallPost1 = new THREE.Mesh(stallPostGeo, frameMaterial);
+        stallPost1.position.set(-width/2 - 0.6, height/2, -depth/2 + 0.1);
+        rig.add(stallPost1);
+
+        const stallPost2 = stallPost1.clone();
+        stallPost2.position.set(-width/2 - 0.6, height/2, depth/2 - 0.1);
+        rig.add(stallPost2);
+
+        // Sledgehammer target (orange disc)
+        const targetGeo = new THREE.CylinderGeometry(0.3, 0.3, 0.05, 32);
+        const target = new THREE.Mesh(targetGeo, orangeMaterial);
+        target.rotation.x = Math.PI / 2;
+        target.position.set(-width/2 - 0.6, height - 0.3, 0);
+        target.castShadow = true;
+        rig.add(target);
+
+        // Dip bars
+        const dipBarGeo = new THREE.CylinderGeometry(0.035, 0.035, 0.8, 16);
+        const dipBar1 = new THREE.Mesh(dipBarGeo, orangeMaterial);
+        dipBar1.rotation.z = Math.PI / 2;
+        dipBar1.position.set(0, 1.2, -depth/2 - 0.4);
+        dipBar1.castShadow = true;
+        rig.add(dipBar1);
+
+        const dipBar2 = dipBar1.clone();
+        dipBar2.position.set(0, 1.2, -depth/2 - 0.8);
+        rig.add(dipBar2);
+
+        // Dip bar supports
+        const dipSupportGeo = new THREE.BoxGeometry(0.04, 0.6, 0.04);
+        const dipSupport1 = new THREE.Mesh(dipSupportGeo, frameMaterial);
+        dipSupport1.position.set(-0.2, 1, -depth/2 - 0.4);
+        rig.add(dipSupport1);
+
+        const dipSupport2 = dipSupport1.clone();
+        dipSupport2.position.set(0.2, 1, -depth/2 - 0.4);
+        rig.add(dipSupport2);
+
+        const dipSupport3 = dipSupport1.clone();
+        dipSupport3.position.set(-0.2, 1, -depth/2 - 0.8);
+        rig.add(dipSupport3);
+
+        const dipSupport4 = dipSupport1.clone();
+        dipSupport4.position.set(0.2, 1, -depth/2 - 0.8);
+        rig.add(dipSupport4);
+
+        // Gymnastic rings
+        const ringGeo = new THREE.TorusGeometry(0.12, 0.015, 8, 32);
+        const ring1 = new THREE.Mesh(ringGeo, orangeMaterial);
+        ring1.position.set(-width/2 - 0.3, 2, -0.2);
+        rig.add(ring1);
+
+        const ring2 = ring1.clone();
+        ring2.position.set(-width/2 - 0.3, 1.8, 0.2);
+        rig.add(ring2);
+
+        // Ring straps
+        const strapGeo = new THREE.CylinderGeometry(0.005, 0.005, 0.6, 8);
+        const strap1 = new THREE.Mesh(strapGeo, new THREE.MeshStandardMaterial({ color: 0x333333 }));
+        strap1.position.set(-width/2 - 0.3, 2.3, -0.2);
+        rig.add(strap1);
+
+        const strap2 = strap1.clone();
+        strap2.position.set(-width/2 - 0.3, 2.1, 0.2);
+        rig.add(strap2);
+
+        // Sit-up bench
+        const benchLength = 1.5;
+        const benchWidth = 0.4;
+        const benchGeo = new THREE.BoxGeometry(benchWidth, 0.05, benchLength);
+        const benchMat = new THREE.MeshStandardMaterial({ color: 0xd4a574 });
+        const bench = new THREE.Mesh(benchGeo, benchMat);
+        bench.position.set(-width/2 - 0.3, 0.3, 1.2);
+        bench.rotation.x = 0.15;
+        bench.castShadow = true;
+        rig.add(bench);
+
+        // Foot roller
+        const rollerGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.5, 16);
+        const roller = new THREE.Mesh(rollerGeo, new THREE.MeshStandardMaterial({ color: 0x1a1a1a }));
+        roller.rotation.z = Math.PI / 2;
+        roller.position.set(-width/2 - 0.3, 0.5, 0.5);
+        rig.add(roller);
+
+        // Fat grip pull-up bar
+        const fatBarGeo = new THREE.CylinderGeometry(0.05, 0.05, 1.2, 16);
+        const fatBar = new THREE.Mesh(fatBarGeo, new THREE.MeshStandardMaterial({ 
+            color: 0x1a1a1a,
+            roughness: 0.8 
+        }));
+        fatBar.rotation.z = Math.PI / 2;
+        fatBar.position.set(width/2 + 0.5, 2.5, 0);
+        fatBar.castShadow = true;
+        rig.add(fatBar);
+
+        // Fat bar supports
+        const fatSupportGeo = new THREE.BoxGeometry(0.04, 0.3, 0.04);
+        const fatSupport1 = new THREE.Mesh(fatSupportGeo, frameMaterial);
+        fatSupport1.position.set(width/2 + 0.2, 2.35, 0);
+        rig.add(fatSupport1);
+
+        const fatSupport2 = fatSupport1.clone();
+        fatSupport2.position.set(width/2 + 0.8, 2.35, 0);
+        rig.add(fatSupport2);
+
+        // Additional outrigger posts
+        createPost(width/2 + 0.5, -0.5);
+        createPost(width/2 + 0.5, 0.5);
+
+        // Cross brace for outriggers
+        const braceGeo = new THREE.BoxGeometry(0.5, postSize, postSize);
+        const brace = new THREE.Mesh(braceGeo, frameMaterial);
+        brace.position.set(width/2 + 0.5, 0.5, 0);
+        rig.add(brace);
+
+        // Floor
+        const floorGeo = new THREE.PlaneGeometry(20, 20);
+        const floorMat = new THREE.MeshStandardMaterial({ 
+            color: 0x111111,
+            roughness: 0.9,
+            metalness: 0.1
+        });
+        const floor = new THREE.Mesh(floorGeo, floorMat);
+        floor.rotation.x = -Math.PI / 2;
+        floor.receiveShadow = true;
+        scene.add(floor);
+
+        // Grid helper
+        const gridHelper = new THREE.GridHelper(20, 20, 0x86C1B7, 0x222222);
+        gridHelper.position.y = 0.01;
+        scene.add(gridHelper);
+
+        // Animation
+        let autoRotate = false;
+        let exploded = false;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            if (autoRotate) {
+                rig.rotation.y += 0.005;
+            }
+            
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / (window.innerHeight * 0.7);
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight * 0.7);
+        });
+
+        // Button functions
+        window.resetView = () => {
+            camera.position.set(8, 6, 8);
+            controls.target.set(0, 0, 0);
+            rig.rotation.y = 0;
+            autoRotate = false;
+        };
+
+        window.toggleRotation = () => {
+            autoRotate = !autoRotate;
+        };
+
+        let colorIndex = 0;
+        const colors = [0xff6b35, 0x86C1B7, 0xffd93d, 0x6bcf7f, 0xff6b9d];
+        
+        window.changeColor = () => {
+            colorIndex = (colorIndex + 1) % colors.length;
+            orangeMaterial.color.setHex(colors[colorIndex]);
+            accentMaterial.color.setHex(colors[colorIndex]);
+        };
+
+        window.explodeView = () => {
+            exploded = !exploded;
+            const explosionFactor = exploded ? 1.5 : 1;
+            
+            rig.children.forEach((child, index) => {
+                if (child.geometry) {
+                    const originalPos = child.userData.originalPos || child.position.clone();
+                    if (!child.userData.originalPos) {
+                        child.userData.originalPos = originalPos;
+                    }
+                    
+                    const direction = originalPos.clone().normalize();
+                    child.position.copy(originalPos).add(direction.multiplyScalar(exploded ? 0.5 : 0));
+                }
+            });
+        };
+    </script>
+</body>
+</html>
