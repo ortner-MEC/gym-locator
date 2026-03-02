@@ -34,20 +34,36 @@ class ReportGenerator:
         print(f"   📈 Markt-Sättigung:        {scores['market_saturation']}/100")
         print(f"   ⏱️  Reichweite (Fahrzeit): {scores['reachability']}/100")
         
-        # Competition Details
+        # Competition Details with intelligent filtering
         comp = analysis_data.get('competition', {})
         print("\n" + "-" * 70)
-        print(f"🏢 KONKURRENZANALYSE:")
-        print(f"   Anzahl Fitness-Studios im Umkreis: {comp.get('count', 0)}")
+        print(f"🏢 KONKURRENZANALYSE (KI-gefiltert):")
+        
+        if comp.get('filtering_explanation'):
+            print(f"   📊 {comp['filtering_explanation'][0]}")
+            if len(comp['filtering_explanation']) > 1:
+                print(f"   ℹ️  {comp['filtering_explanation'][1]}")
+        
+        print(f"   Gefundene Einrichtungen: {comp.get('total_found', 0)}")
+        print(f"   Davon echte Konkurrenz: {comp.get('count', 0)}")
         print(f"   Durchschnittsbewertung: {comp.get('average_rating', 0)}/5.0")
         print(f"   Gut bewertete Gyms (≥4★): {comp.get('highly_rated_count', 0)}")
+        print(f"   Marktsättigung: {comp.get('market_saturation', 'unbekannt').upper()}")
         
         if comp.get('competitors'):
-            print("\n   Konkurrenten:")
+            print("\n   🏋️ Echte Konkurrenten:")
             for gym in comp['competitors'][:5]:
-                name = gym.get('displayName', {}).get('text', 'Unbekannt')
+                name = gym.get('name', 'Unbekannt')
                 rating = gym.get('rating', '-')
-                print(f"      • {name} ({rating}★)")
+                category = gym.get('category', 'unclear')
+                cat_emoji = {'direct_competitor': '🎯', 'indirect_competitor': '⚡'}.get(category, '❓')
+                print(f"      {cat_emoji} {name} ({rating}★)")
+        
+        if comp.get('filtered_out'):
+            print("\n   ❌ Ausgeschlossen (keine direkte Konkurrenz):")
+            for item in comp['filtered_out'][:3]:
+                name = item.get('name', 'Unbekannt')
+                print(f"      • {name}")
         
         # NEW: Travel Time Analysis
         travel = analysis_data.get('travel_analysis', {})

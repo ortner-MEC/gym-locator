@@ -79,19 +79,26 @@ class PlacesAPI:
             return None
 
     def analyze_competition(self, lat: float, lng: float, radius: int) -> Dict:
-        """Analyze fitness competition in area."""
+        """Analyze fitness competition in area with intelligent filtering."""
+        from modules.competition_intelligence import CompetitionIntelligence
+        
         competitors = self.search_nearby(lat, lng, radius, PLACE_TYPES['competitors'])
         
-        total_competitors = len(competitors)
-        avg_rating = sum(c.get('rating', 0) for c in competitors) / total_competitors if total_competitors > 0 else 0
-        highly_rated = sum(1 for c in competitors if c.get('rating', 0) >= 4.0)
+        # Use AI-based filtering
+        intelligence = CompetitionIntelligence()
+        filtered = intelligence.filter_real_competition(competitors)
         
         return {
-            'count': total_competitors,
-            'competitors': competitors,
-            'average_rating': round(avg_rating, 1),
-            'highly_rated_count': highly_rated,
-            'density_score': max(0, 100 - (total_competitors * 15)),
+            'count': filtered['real_count'],
+            'total_found': filtered['total_found'],
+            'competitors': filtered['real_competitors'],
+            'filtered_out': filtered['not_competition'],
+            'unclear': filtered['unclear'],
+            'average_rating': filtered['average_rating'],
+            'highly_rated_count': filtered['highly_rated_count'],
+            'density_score': filtered['density_score'],
+            'market_saturation': filtered['market_saturation'],
+            'filtering_explanation': intelligence.generate_explanation(filtered)
         }
 
     def analyze_target_demographics(self, lat: float, lng: float, radius: int) -> Dict:

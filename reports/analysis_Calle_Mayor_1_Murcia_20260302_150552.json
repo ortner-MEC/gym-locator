@@ -1,0 +1,580 @@
+{
+  "address": "Calle Mayor 1, Murcia",
+  "timestamp": "2026-03-02T15:05:52.904307",
+  "analysis": {
+    "competition": {
+      "count": 20,
+      "competitors": [
+        {
+          "id": "ChIJHXLuDP5_Yw0Rm9SgaexX630",
+          "types": [
+            "gym",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9673661,
+            "longitude": -1.2109847
+          },
+          "rating": 4,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 60,
+          "displayName": {
+            "text": "Pabellón Santiago Tomás Magritas",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJAa9SjMaBYw0RrSIckgKCGxA",
+          "types": [
+            "fitness_center",
+            "sports_complex",
+            "gym",
+            "sports_school",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9730953,
+            "longitude": -1.2052612
+          },
+          "rating": 4.4,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 88,
+          "displayName": {
+            "text": "Baeza Strength Gimnasio en Murcia",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJDzsWfWqAYw0RblBCLVr8OWs",
+          "types": [
+            "fitness_center",
+            "sports_complex",
+            "gym",
+            "sports_club",
+            "sports_school",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "association_or_organization",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.993909599999995,
+            "longitude": -1.1922572
+          },
+          "rating": 4,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 87,
+          "displayName": {
+            "text": "Club Deportivo Horizonte",
+            "languageCode": "en"
+          }
+        },
+        {
+          "id": "ChIJeUfJKG2AYw0RFRn5ywb2F6o",
+          "types": [
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9942841,
+            "longitude": -1.2015884
+          },
+          "rating": 3.7,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 20,
+          "displayName": {
+            "text": "PABELLÓN DE DEPORTES - LA ÑORA-JAVALI VIEJO",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJJeeGx_5_ZA0ROLT5rOOq2Qo",
+          "types": [
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.976648399999995,
+            "longitude": -1.2156888
+          },
+          "rating": 3.5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 25,
+          "displayName": {
+            "text": "Pabellón Deportivo José Antonio Abellán (La Salud)",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJfQgG_Ox_Yw0RWfLXzASvhzE",
+          "types": [
+            "paintball_center",
+            "sports_complex",
+            "athletic_field",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.972211,
+            "longitude": -1.194288
+          },
+          "rating": 5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 328,
+          "displayName": {
+            "text": "Urban Paintball Murcia",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJ_6PTZ1x_Yw0RCIbtrCLy-RE",
+          "types": [
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9712876,
+            "longitude": -1.2015196
+          },
+          "rating": 4.2,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 16,
+          "displayName": {
+            "text": "Pabellón Pedro Agustín Pérez Guirao",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJbeKK6bV_ZA0R9GzJbfipqZg",
+          "types": [
+            "fitness_center",
+            "gym",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.97763,
+            "longitude": -1.2176806
+          },
+          "rating": 4.9,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 91,
+          "displayName": {
+            "text": "Top Sport Club",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJ1R9gJQCAZA0RqdlVk24pdxY",
+          "types": [
+            "cosmetics_store",
+            "fitness_center",
+            "gym",
+            "clothing_store",
+            "health",
+            "store",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9702476,
+            "longitude": -1.2126537
+          },
+          "rating": 4.2,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 137,
+          "displayName": {
+            "text": "Druni Perfumerías ®",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJieQmgT2AYw0RZjQKoodiR14",
+          "types": [
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9859509,
+            "longitude": -1.1927505
+          },
+          "rating": 3.4,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 68,
+          "displayName": {
+            "text": "Piscina Municipal La Ñora",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJUwDG0MWBYw0RlJCgYhG7rSA",
+          "types": [
+            "gym",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9939964,
+            "longitude": -1.1921965
+          },
+          "rating": 5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 17,
+          "displayName": {
+            "text": "CMC Fitness - (Gimnasio Horizonte)",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJySXepgKAYw0RWO69weMkPv0",
+          "types": [
+            "skateboard_park",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9724733,
+            "longitude": -1.2033497000000002
+          },
+          "rating": 3.5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 83,
+          "displayName": {
+            "text": "Pumptrack Alcantarilla",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJKQfGuxWBYw0RHVWtBTxEY6c",
+          "types": [
+            "sports_complex",
+            "gym",
+            "sports_school",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9726181,
+            "longitude": -1.2107762
+          },
+          "rating": 5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 26,
+          "displayName": {
+            "text": "Dúo Fit Center",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJ_3WGCCqAYw0R9deAUgNUTiA",
+          "types": [
+            "gym",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9727466,
+            "longitude": -1.1778826
+          },
+          "rating": 4.6,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 30,
+          "displayName": {
+            "text": "Gimnasio Coliseum",
+            "languageCode": "en"
+          }
+        },
+        {
+          "id": "ChIJt17ufU1_ZA0Rza-bntl_OmE",
+          "types": [
+            "sports_complex",
+            "gym",
+            "sports_school",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.975727899999995,
+            "longitude": -1.2176966
+          },
+          "rating": 4.9,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 14,
+          "displayName": {
+            "text": "Centro de Entrenamiento Formas 2",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJ9fALwrqBYw0RtyjOWZBL0Lk",
+          "types": [
+            "gym",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9852923,
+            "longitude": -1.1788698
+          },
+          "rating": 5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 1,
+          "displayName": {
+            "text": "Parque de Calistenia",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJzQ1a3w2AYw0RZCuRC_wC56U",
+          "types": [
+            "gym",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9882348,
+            "longitude": -1.2040161
+          },
+          "rating": 4.5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 31,
+          "displayName": {
+            "text": "Gimnasio Alzeo",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJjWwLTfGBZA0RlJLSTVqMQpo",
+          "types": [
+            "sports_complex",
+            "gym",
+            "sports_school",
+            "medical_clinic",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.9702415,
+            "longitude": -1.2138389
+          },
+          "rating": 5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 29,
+          "displayName": {
+            "text": "Fisioterapia, Osteopatia y pilates Raquel Aroca",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJldogWkp_Yw0RAa8SrTUWmzQ",
+          "types": [
+            "sports_complex",
+            "gym",
+            "sports_school",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.972028699999996,
+            "longitude": -1.2079171
+          },
+          "rating": 4.8,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 32,
+          "displayName": {
+            "text": "GYM BUDOKAN Gimnasio en Alcantarilla",
+            "languageCode": "es"
+          }
+        },
+        {
+          "id": "ChIJxdlncf9_Yw0RcfwX8z3AduA",
+          "types": [
+            "sports_complex",
+            "gym",
+            "sports_school",
+            "health",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "location": {
+            "latitude": 37.971039999999995,
+            "longitude": -1.2094204
+          },
+          "rating": 4.5,
+          "businessStatus": "OPERATIONAL",
+          "userRatingCount": 26,
+          "displayName": {
+            "text": "Gimnasio Club Shogun",
+            "languageCode": "es"
+          }
+        }
+      ],
+      "average_rating": 4.4,
+      "highly_rated_count": 16,
+      "density_score": 0
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 0,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 4,
+      "parking_count": 9,
+      "accessibility_score": 100,
+      "transport_types": [
+        "Plaza de la Ñora",
+        "Santiago Hellin",
+        "Puente Molino"
+      ]
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 2,
+        "10min_reach": 13,
+        "15min_reach": 24,
+        "estimated_population_10min": 2535,
+        "coverage_percentage": 4.5,
+        "average_time": 35.0
+      },
+      "driving": {
+        "5min_reach": 22,
+        "10min_reach": 68,
+        "15min_reach": 72,
+        "estimated_population_10min": 53040
+      },
+      "score": 0
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Murcia",
+          "price": 1800,
+          "size": 250,
+          "price_per_m2": 7.2,
+          "location": "Murcia",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Murcia",
+          "price": 2280,
+          "size": 300,
+          "price_per_m2": 7.6,
+          "location": "Murcia",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Murcia",
+          "price": 2800,
+          "size": 350,
+          "price_per_m2": 8.0,
+          "location": "Murcia",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Murcia",
+          "price": 3360,
+          "size": 400,
+          "price_per_m2": 8.4,
+          "location": "Murcia",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Murcia",
+          "price": 4400,
+          "size": 500,
+          "price_per_m2": 8.8,
+          "location": "Murcia",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 8.0,
+      "monthly_estimate_350m2": 2800,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "coordinates": {
+      "lat": 37.97783330000001,
+      "lng": -1.1957574
+    }
+  },
+  "score": {
+    "total_score": 16.0,
+    "individual_scores": {
+      "competition": 0,
+      "demographics": 0,
+      "accessibility": 100,
+      "market_saturation": 0,
+      "reachability": 0
+    },
+    "rating": "🔴 RISKY",
+    "recommendation": "Nicht empfohlen. Zu viele Risikofaktoren.",
+    "risk_factors": [
+      "Hohe Konkurrenz (20 Gyms im Umkreis)",
+      "Starke Konkurrenz: Mehrere gut bewertete Gyms",
+      "Geringe Zielgruppen-Dichte in der Umgebung",
+      "Geringe Reichweite: Wenig Gebiete in 10min zu Fuß erreichbar"
+    ],
+    "opportunities": [
+      "Ausgezeichnete Erreichbarkeit"
+    ]
+  }
+}
