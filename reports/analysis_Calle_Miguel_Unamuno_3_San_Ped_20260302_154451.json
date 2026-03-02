@@ -1,0 +1,619 @@
+{
+  "address": "Calle Miguel Unamuno 3, San Pedro del Pinatar",
+  "timestamp": "2026-03-02T15:44:51.244053",
+  "analysis": {
+    "competition": {
+      "count": 15,
+      "total_found": 20,
+      "competitors": [
+        {
+          "name": "Shala Ahimsa Yoga Studio",
+          "rating": 5,
+          "user_ratings": 43,
+          "types": [
+            "yoga_studio",
+            "fitness_center",
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 148.42061617843314,
+          "distance_km": 0.15,
+          "proximity_score": 100,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 6,
+          "is_real_competition": true,
+          "relevance": 100.0
+        },
+        {
+          "name": "CLUB DE BOXEO PINATAR . SPORTS CENTER 12 ROUNDS",
+          "rating": 5,
+          "user_ratings": 16,
+          "types": [
+            "sports_coaching",
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 45.760882857395124,
+          "distance_km": 0.05,
+          "proximity_score": 100,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 6,
+          "is_real_competition": true,
+          "relevance": 100.0
+        },
+        {
+          "name": "MK GYM",
+          "rating": 4.6,
+          "user_ratings": 61,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 155.62912219869995,
+          "distance_km": 0.16,
+          "proximity_score": 100,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 5,
+          "is_real_competition": true,
+          "relevance": 100.0
+        },
+        {
+          "name": "Centro de Entrenamiento FitGirls Studio",
+          "rating": 5,
+          "user_ratings": 11,
+          "types": [
+            "fitness_center",
+            "gym",
+            "consultant",
+            "sports_activity_location",
+            "point_of_interest",
+            "service",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 125.31873509054498,
+          "distance_km": 0.13,
+          "proximity_score": 100,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 7,
+          "is_real_competition": true,
+          "relevance": 100.0
+        },
+        {
+          "name": "Centro Deportivo San Pedro",
+          "rating": 4.2,
+          "user_ratings": 21,
+          "types": [
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 654.036980797242,
+          "distance_km": 0.65,
+          "proximity_score": 60,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 4,
+          "is_real_competition": true,
+          "relevance": 84.0
+        },
+        {
+          "name": "The Fitness Factory",
+          "rating": 4.9,
+          "user_ratings": 39,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 530.2851739687637,
+          "distance_km": 0.53,
+          "proximity_score": 60,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 7,
+          "is_real_competition": true,
+          "relevance": 84.0
+        },
+        {
+          "name": "Marlo studio",
+          "rating": 5,
+          "user_ratings": 29,
+          "types": [
+            "yoga_studio",
+            "fitness_center",
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 722.7148098820632,
+          "distance_km": 0.72,
+          "proximity_score": 60,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 4,
+          "is_real_competition": true,
+          "relevance": 84.0
+        },
+        {
+          "name": "Pabellon Municipal Príncipe de Asturias",
+          "rating": 4.2,
+          "user_ratings": 484,
+          "types": [
+            "fitness_center",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1290.1758134028705,
+          "distance_km": 1.29,
+          "proximity_score": 40,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 4,
+          "is_real_competition": true,
+          "relevance": 76.0
+        },
+        {
+          "name": "Pinatar Arena",
+          "rating": 4.3,
+          "user_ratings": 1017,
+          "types": [
+            "sports_complex",
+            "fitness_center",
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1798.6094371677045,
+          "distance_km": 1.8,
+          "proximity_score": 20,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 4,
+          "is_real_competition": true,
+          "relevance": 68.0
+        },
+        {
+          "name": "Crossfit BeTribe",
+          "rating": 5,
+          "user_ratings": 33,
+          "types": [
+            "fitness_center",
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1750.8700295457895,
+          "distance_km": 1.75,
+          "proximity_score": 20,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 7,
+          "is_real_competition": true,
+          "relevance": 68.0
+        },
+        {
+          "name": "Genesis Gym Club",
+          "rating": 4.6,
+          "user_ratings": 47,
+          "types": [
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1941.1755872042745,
+          "distance_km": 1.94,
+          "proximity_score": 20,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 6,
+          "is_real_competition": true,
+          "relevance": 68.0
+        },
+        {
+          "name": "Centro Prana yoga",
+          "rating": 4.5,
+          "user_ratings": 13,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 484.33645677841446,
+          "distance_km": 0.48,
+          "proximity_score": 80,
+          "category": "indirect_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 3,
+          "is_real_competition": true,
+          "relevance": 62.0
+        },
+        {
+          "name": "C.A.R.",
+          "rating": 4.9,
+          "user_ratings": 17,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 760.3172977580107,
+          "distance_km": 0.76,
+          "proximity_score": 60,
+          "category": "indirect_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 3,
+          "is_real_competition": true,
+          "relevance": 54.0
+        },
+        {
+          "name": "Circuito Pinatar",
+          "rating": 5,
+          "user_ratings": 1,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1241.1247961965116,
+          "distance_km": 1.24,
+          "proximity_score": 40,
+          "category": "indirect_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 3,
+          "is_real_competition": true,
+          "relevance": 46.0
+        },
+        {
+          "name": "Centro De Yoga Solar",
+          "rating": 0,
+          "user_ratings": 0,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1685.7968031175985,
+          "distance_km": 1.69,
+          "proximity_score": 20,
+          "category": "indirect_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 3,
+          "is_real_competition": true,
+          "relevance": 38.0
+        }
+      ],
+      "filtered_out": [
+        {
+          "name": "Municipal swimming pool Aqualia",
+          "rating": 4.3,
+          "user_ratings": 435,
+          "types": [
+            "gym",
+            "swimming_pool",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1201.9028041282565,
+          "distance_km": 1.2,
+          "proximity_score": 40,
+          "category": "not_competition",
+          "false_positive_score": 7,
+          "true_gym_score": 3,
+          "is_real_competition": false,
+          "relevance": 0
+        },
+        {
+          "name": "Pabellón Auxiliar \"Cubo\" del Polideportivo Principe de Asturias",
+          "rating": 4.5,
+          "user_ratings": 63,
+          "types": [
+            "fitness_center",
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1265.9701840931732,
+          "distance_km": 1.27,
+          "proximity_score": 40,
+          "category": "not_competition",
+          "false_positive_score": 4,
+          "true_gym_score": 3,
+          "is_real_competition": false,
+          "relevance": 0
+        },
+        {
+          "name": "Skatepark San Pedro del Pintar",
+          "rating": 4.3,
+          "user_ratings": 331,
+          "types": [
+            "skateboard_park",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "distance_m": 646.5060903148867,
+          "distance_km": 0.65,
+          "proximity_score": 60,
+          "category": "not_competition",
+          "false_positive_score": 4,
+          "true_gym_score": 1,
+          "is_real_competition": false,
+          "relevance": 0
+        }
+      ],
+      "unclear": [
+        {
+          "name": "Club de tiro Almirante Nuñez",
+          "rating": 4.6,
+          "user_ratings": 24,
+          "types": [
+            "sports_club",
+            "sporting_goods_store",
+            "association_or_organization",
+            "event_venue",
+            "sports_complex",
+            "store",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "distance_m": 1593.0243524820082,
+          "distance_km": 1.59,
+          "proximity_score": 20,
+          "category": "unclear",
+          "false_positive_score": 0,
+          "true_gym_score": 1,
+          "is_real_competition": false,
+          "relevance": 25
+        },
+        {
+          "name": "San pedro",
+          "rating": 0,
+          "user_ratings": 0,
+          "types": [
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "distance_m": 1586.7096019388612,
+          "distance_km": 1.59,
+          "proximity_score": 20,
+          "category": "unclear",
+          "false_positive_score": 0,
+          "true_gym_score": 1,
+          "is_real_competition": false,
+          "relevance": 25
+        }
+      ],
+      "average_rating": 4.8,
+      "highly_rated_count": 9,
+      "avg_distance_m": 889.0,
+      "closest_competitor": {
+        "name": "CLUB DE BOXEO PINATAR . SPORTS CENTER 12 ROUNDS",
+        "rating": 5,
+        "user_ratings": 16,
+        "types": [
+          "sports_coaching",
+          "sports_school",
+          "gym",
+          "sports_complex",
+          "sports_activity_location",
+          "point_of_interest",
+          "health",
+          "establishment"
+        ],
+        "distance_m": 45.760882857395124,
+        "distance_km": 0.05,
+        "proximity_score": 100,
+        "category": "direct_competitor",
+        "false_positive_score": 0,
+        "true_gym_score": 6,
+        "is_real_competition": true,
+        "relevance": 100.0
+      },
+      "density_score": 0,
+      "gyms_per_1000": 0.6,
+      "people_per_gym": 1666,
+      "market_potential": 10,
+      "market_saturation": "oversaturated",
+      "market_metrics": {
+        "population_estimate": 25000,
+        "gym_count": 15,
+        "gyms_per_1000": 0.6,
+        "people_per_gym": 1666,
+        "market_penetration_percent": 18.0,
+        "market_potential": 10,
+        "saturation_level": "oversaturated",
+        "avg_gym_size_estimate": "medium",
+        "avg_reviews_per_gym": 122,
+        "estimated_capacity_per_gym": 300,
+        "smartgym_potential_members": 166,
+        "market_gap": "saturated"
+      },
+      "filtering_explanation": [
+        "Von 20 gefundenen Einrichtungen sind 15 echte Konkurrenz",
+        "Ausgeschlossen: Municipal swimming pool Aqualia, Pabellón Auxiliar \"Cubo\" del Polideportivo Principe de Asturias, Skatepark San Pedro del Pintar etc.",
+        "Nächster Konkurrent: CLUB DE BOXEO PINATAR . SPORTS CENTER 12 ROUNDS (0.05km entfernt)",
+        "Durchschnittsentfernung: 0.9km"
+      ]
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 0,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 2,
+      "parking_count": 20,
+      "accessibility_score": 100,
+      "transport_types": [
+        "San Pedro del Pinatar",
+        "Lo Pagan"
+      ]
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 3,
+        "10min_reach": 19,
+        "15min_reach": 40,
+        "estimated_population_10min": 3705,
+        "coverage_percentage": 6.6,
+        "average_time": 27.1
+      },
+      "driving": {
+        "5min_reach": 13,
+        "10min_reach": 70,
+        "15min_reach": 72,
+        "estimated_population_10min": 54600
+      },
+      "score": 0
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Spanien",
+          "price": 2025,
+          "size": 250,
+          "price_per_m2": 8.1,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Spanien",
+          "price": 2565,
+          "size": 300,
+          "price_per_m2": 8.55,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Spanien",
+          "price": 3150,
+          "size": 350,
+          "price_per_m2": 9.0,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Spanien",
+          "price": 3780,
+          "size": 400,
+          "price_per_m2": 9.45,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Spanien",
+          "price": 4950,
+          "size": 500,
+          "price_per_m2": 9.9,
+          "location": "Spanien",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 9.0,
+      "monthly_estimate_350m2": 3150,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "coordinates": {
+      "lat": 37.8323348,
+      "lng": -0.7896643
+    }
+  },
+  "score": {
+    "total_score": 16.0,
+    "individual_scores": {
+      "competition": 0,
+      "demographics": 0,
+      "accessibility": 100,
+      "market_saturation": 0,
+      "reachability": 0
+    },
+    "rating": "🔴 RISKY",
+    "recommendation": "Nicht empfohlen. Zu viele Risikofaktoren.",
+    "risk_factors": [
+      "Hohe Konkurrenz (15 Gyms im Umkreis)",
+      "Starke Konkurrenz: Mehrere gut bewertete Gyms",
+      "Geringe Zielgruppen-Dichte in der Umgebung",
+      "Geringe Reichweite: Wenig Gebiete in 10min zu Fuß erreichbar"
+    ],
+    "opportunities": [
+      "Ausgezeichnete Erreichbarkeit"
+    ]
+  }
+}

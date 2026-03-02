@@ -37,63 +37,35 @@ class ReportGenerator:
         # Competition Details with intelligent filtering
         comp = analysis_data.get('competition', {})
         print("\n" + "-" * 70)
-        print(f"🏢 KONKURRENZANALYSE (KI-gefiltert):")
+        print(f"🏢 KONKURRENZANALYSE (SmartGym-relevant):")
         
         if comp.get('filtering_explanation'):
             print(f"   📊 {comp['filtering_explanation'][0]}")
-            if len(comp['filtering_explanation']) > 1:
-                print(f"   ℹ️  {comp['filtering_explanation'][1]}")
         
-        print(f"   Gefundene Einrichtungen: {comp.get('total_found', 0)}")
-        print(f"   Davon echte Konkurrenz: {comp.get('count', 0)}")
-        print(f"   Durchschnittsbewertung: {comp.get('average_rating', 0)}/5.0")
-        print(f"   Gut bewertete Gyms (≥4★): {comp.get('highly_rated_count', 0)}")
-        print(f"   Marktsättigung: {comp.get('market_saturation', 'unbekannt').upper()}")
+        print(f"   Gefunden: {comp.get('total_found', 0)} | Echte Gyms: {comp.get('real_count', 0)}")
+        print(f"   Ø Bewertung: {comp.get('average_rating', 0)}/5.0 | Gute (≥4★): {comp.get('good_gyms_count', 0)}")
+        print(f"   Marktsättigung: {comp.get('saturation', 'unbekannt').upper()}")
         
-        if comp.get('market_metrics'):
-            metrics = comp['market_metrics']
-            print(f"\n   📊 MARKTANALYSE:")
-            print(f"      Geschätzte Bevölkerung (2km): {metrics.get('population_estimate', 'N/A'):,}")
-            print(f"      Gyms pro 1.000 Einwohner: {metrics.get('gyms_per_1000', 'N/A')}")
-            print(f"      Einwohner pro Gym: {metrics.get('people_per_gym', 'N/A')}")
-            print(f"      Marktdurchdringung: {metrics.get('market_penetration_percent', 'N/A')}%")
-            print(f"      Marktpotenzial: {metrics.get('market_potential', 'N/A')}/100")
-            print(f"      Geschätzte durchschnittliche Gym-Größe: {metrics.get('avg_gym_size_estimate', 'N/A')}")
-            print(f"      Potenzielle SmartGym-Mitglieder: ~{metrics.get('smartgym_potential_members', 'N/A')}")
-            
-            if metrics.get('market_gap') == 'positive':
-                print(f"      ✅ Marktlücke erkannt!")
-            else:
-                print(f"      ⚠️  Markt gesättigt")
+        if comp.get('population_estimate'):
+            print(f"\n   👥 Markt:")
+            print(f"      Einwohner: {comp['population_estimate']:,}")
+            print(f"      Einwohner/Gym: {comp.get('people_per_gym', 'N/A')}")
+            print(f"      Marktpotenzial: {comp.get('market_potential', 0)}/100")
         
-        if comp.get('competitors'):
-            print("\n   🏋️ Echte Konkurrenten (mit Distanz):")
-            for gym in comp['competitors'][:5]:
-                name = gym.get('name', 'Unbekannt')
+        if comp.get('real_competitors'):
+            print(f"\n   🏋️ Konkurrenz:")
+            for gym in comp['real_competitors'][:5]:
+                name = gym.get('name', 'Unbekannt')[:40]
                 rating = gym.get('rating', '-')
-                category = gym.get('category', 'unclear')
-                dist_km = gym.get('distance_km', '?')
-                cat_emoji = {'direct_competitor': '🎯', 'indirect_competitor': '⚡'}.get(category, '❓')
-                dist_emoji = '🚨' if gym.get('proximity_score', 0) >= 80 else '⚠️' if gym.get('proximity_score', 0) >= 60 else '📍'
-                print(f"      {cat_emoji} {dist_emoji} {name} ({rating}★) - {dist_km}km")
+                dist = gym.get('distance_km', '?')
+                print(f"      • {name} ({rating}★, {dist}km)")
         
         if comp.get('closest_competitor'):
-            closest = comp['closest_competitor']
-            print(f"\n   🔴 Nächster Konkurrent: {closest['name']}")
-            print(f"      Entfernung: {closest['distance_km']}km")
-            print(f"      Bewertung: {closest['rating']}★")
-            if closest['distance_km'] < 0.3:
-                print(f"      ⚠️  WARNUNG: Weniger als 300m entfernt!")
+            c = comp['closest_competitor']
+            print(f"\n   🔴 Nächster: {c['name']} ({c['distance_km']}km)")
         
-        if comp.get('avg_distance_m'):
-            avg_km = comp['avg_distance_m'] / 1000
-            print(f"\n   📏 Durchschnittsentfernung: {avg_km:.2f}km")
-        
-        if comp.get('filtered_out'):
-            print("\n   ❌ Ausgeschlossen (keine direkte Konkurrenz):")
-            for item in comp['filtered_out'][:3]:
-                name = item.get('name', 'Unbekannt')
-                print(f"      • {name}")
+        if comp.get('not_competition'):
+            print(f"\n   ❌ Ausgeschlossen: {len(comp['not_competition'])} (Yoga, Boxen, etc.)")
         
         # NEW: Travel Time Analysis
         travel = analysis_data.get('travel_analysis', {})

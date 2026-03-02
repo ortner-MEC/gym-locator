@@ -1,0 +1,463 @@
+{
+  "address": "Rojales, Alicante",
+  "timestamp": "2026-03-02T15:37:19.120917",
+  "analysis": {
+    "competition": {
+      "count": 8,
+      "total_found": 13,
+      "competitors": [
+        {
+          "name": "physique24 gym",
+          "rating": 4.7,
+          "user_ratings": 123,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 492.62096952962696,
+          "distance_km": 0.49,
+          "proximity_score": 80,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 5,
+          "is_real_competition": true,
+          "relevance": 92.0
+        },
+        {
+          "name": "Living Of Strength - Centro de Entrenamiento en Rojales",
+          "rating": 5,
+          "user_ratings": 24,
+          "types": [
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "service",
+            "establishment"
+          ],
+          "distance_m": 299.0968763372932,
+          "distance_km": 0.3,
+          "proximity_score": 80,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 6,
+          "is_real_competition": true,
+          "relevance": 92.0
+        },
+        {
+          "name": "Adult Outdoor Gym",
+          "rating": 0,
+          "user_ratings": 0,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 447.21655511676937,
+          "distance_km": 0.45,
+          "proximity_score": 80,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 5,
+          "is_real_competition": true,
+          "relevance": 92.0
+        },
+        {
+          "name": "REBE11ION Fitness",
+          "rating": 4.7,
+          "user_ratings": 9,
+          "types": [
+            "gym",
+            "fitness_center",
+            "sports_coaching",
+            "sports_school",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "service",
+            "establishment"
+          ],
+          "distance_m": 903.8060661917646,
+          "distance_km": 0.9,
+          "proximity_score": 60,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 8,
+          "is_real_competition": true,
+          "relevance": 84.0
+        },
+        {
+          "name": "Herbolario, Masajes,Terapias Alternativas, | Xana-T Centro de Bienestar",
+          "rating": 5,
+          "user_ratings": 12,
+          "types": [
+            "yoga_studio",
+            "fitness_center",
+            "massage",
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "store",
+            "point_of_interest",
+            "health",
+            "service",
+            "establishment"
+          ],
+          "distance_m": 1294.0767811246953,
+          "distance_km": 1.29,
+          "proximity_score": 40,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 4,
+          "is_real_competition": true,
+          "relevance": 76.0
+        },
+        {
+          "name": "Quesada Fitness Gym",
+          "rating": 4.4,
+          "user_ratings": 243,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1852.5234501794994,
+          "distance_km": 1.85,
+          "proximity_score": 20,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 9,
+          "is_real_competition": true,
+          "relevance": 68.0
+        },
+        {
+          "name": "fit+ Benijófar",
+          "rating": 3.2,
+          "user_ratings": 23,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1796.9122533869192,
+          "distance_km": 1.8,
+          "proximity_score": 20,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 5,
+          "is_real_competition": true,
+          "relevance": 68.0
+        },
+        {
+          "name": "Reform Her Pilates",
+          "rating": 0,
+          "user_ratings": 0,
+          "types": [
+            "sports_school",
+            "gym",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1892.1413095511466,
+          "distance_km": 1.89,
+          "proximity_score": 20,
+          "category": "direct_competitor",
+          "false_positive_score": 0,
+          "true_gym_score": 6,
+          "is_real_competition": true,
+          "relevance": 68.0
+        }
+      ],
+      "filtered_out": [
+        {
+          "name": "Pabellón Polideportivo Municipal Joaquín Garri",
+          "rating": 4.2,
+          "user_ratings": 163,
+          "types": [
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "distance_m": 485.4506207680768,
+          "distance_km": 0.49,
+          "proximity_score": 80,
+          "category": "not_competition",
+          "false_positive_score": 4,
+          "true_gym_score": 1,
+          "is_real_competition": false,
+          "relevance": 0
+        },
+        {
+          "name": "Polideportivo Municipal",
+          "rating": 3.5,
+          "user_ratings": 4,
+          "types": [
+            "stadium",
+            "sports_complex",
+            "sports_activity_location",
+            "event_venue",
+            "point_of_interest",
+            "establishment"
+          ],
+          "distance_m": 1219.2874664809628,
+          "distance_km": 1.22,
+          "proximity_score": 40,
+          "category": "not_competition",
+          "false_positive_score": 5,
+          "true_gym_score": 1,
+          "is_real_competition": false,
+          "relevance": 0
+        },
+        {
+          "name": "Parque de Skate de Benijofar",
+          "rating": 4.4,
+          "user_ratings": 46,
+          "types": [
+            "skateboard_park",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "distance_m": 1992.7579652119457,
+          "distance_km": 1.99,
+          "proximity_score": 20,
+          "category": "not_competition",
+          "false_positive_score": 4,
+          "true_gym_score": 1,
+          "is_real_competition": false,
+          "relevance": 0
+        },
+        {
+          "name": "Campo las Naves Airsoft",
+          "rating": 4.7,
+          "user_ratings": 3,
+          "types": [
+            "adventure_sports_center",
+            "sports_complex",
+            "sports_activity_location",
+            "point_of_interest",
+            "establishment"
+          ],
+          "distance_m": 383.5861661098539,
+          "distance_km": 0.38,
+          "proximity_score": 80,
+          "category": "not_competition",
+          "false_positive_score": 2,
+          "true_gym_score": 1,
+          "is_real_competition": false,
+          "relevance": 0
+        },
+        {
+          "name": "Skate park (street gym)",
+          "rating": 0,
+          "user_ratings": 0,
+          "types": [
+            "gym",
+            "sports_activity_location",
+            "point_of_interest",
+            "health",
+            "establishment"
+          ],
+          "distance_m": 1950.336337584243,
+          "distance_km": 1.95,
+          "proximity_score": 20,
+          "category": "not_competition",
+          "false_positive_score": 4,
+          "true_gym_score": 5,
+          "is_real_competition": false,
+          "relevance": 0
+        }
+      ],
+      "unclear": [],
+      "average_rating": 4.7,
+      "highly_rated_count": 3,
+      "avg_distance_m": 1122.0,
+      "closest_competitor": {
+        "name": "Living Of Strength - Centro de Entrenamiento en Rojales",
+        "rating": 5,
+        "user_ratings": 24,
+        "types": [
+          "sports_school",
+          "gym",
+          "sports_complex",
+          "sports_activity_location",
+          "point_of_interest",
+          "health",
+          "service",
+          "establishment"
+        ],
+        "distance_m": 299.0968763372932,
+        "distance_km": 0.3,
+        "proximity_score": 80,
+        "category": "direct_competitor",
+        "false_positive_score": 0,
+        "true_gym_score": 6,
+        "is_real_competition": true,
+        "relevance": 92.0
+      },
+      "density_score": 30,
+      "gyms_per_1000": 0.32,
+      "people_per_gym": 3125,
+      "market_potential": 40,
+      "market_saturation": "high",
+      "market_metrics": {
+        "population_estimate": 25000,
+        "gym_count": 8,
+        "gyms_per_1000": 0.32,
+        "people_per_gym": 3125,
+        "market_penetration_percent": 9.6,
+        "market_potential": 40,
+        "saturation_level": "high",
+        "avg_gym_size_estimate": "medium",
+        "avg_reviews_per_gym": 54,
+        "estimated_capacity_per_gym": 300,
+        "smartgym_potential_members": 312,
+        "market_gap": "saturated"
+      },
+      "filtering_explanation": [
+        "Von 13 gefundenen Einrichtungen sind 8 echte Konkurrenz",
+        "Ausgeschlossen: Pabellón Polideportivo Municipal Joaquín Garri, Polideportivo Municipal, Parque de Skate de Benijofar etc.",
+        "Nächster Konkurrent: Living Of Strength - Centro de Entrenamiento en Rojales (0.3km entfernt)",
+        "Durchschnittsentfernung: 1.1km"
+      ]
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 0,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 0,
+      "parking_count": 7,
+      "accessibility_score": 35,
+      "transport_types": []
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 1,
+        "10min_reach": 11,
+        "15min_reach": 26,
+        "estimated_population_10min": 2145,
+        "coverage_percentage": 3.8,
+        "average_time": 33.3
+      },
+      "driving": {
+        "5min_reach": 25,
+        "10min_reach": 71,
+        "15min_reach": 72,
+        "estimated_population_10min": 55380
+      },
+      "score": 0
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Spanien",
+          "price": 2025,
+          "size": 250,
+          "price_per_m2": 8.1,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Spanien",
+          "price": 2565,
+          "size": 300,
+          "price_per_m2": 8.55,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Spanien",
+          "price": 3150,
+          "size": 350,
+          "price_per_m2": 9.0,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Spanien",
+          "price": 3780,
+          "size": 400,
+          "price_per_m2": 9.45,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Spanien",
+          "price": 4950,
+          "size": 500,
+          "price_per_m2": 9.9,
+          "location": "Spanien",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 9.0,
+      "monthly_estimate_350m2": 3150,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "coordinates": {
+      "lat": 38.0860483,
+      "lng": -0.7235857
+    }
+  },
+  "score": {
+    "total_score": 14.0,
+    "individual_scores": {
+      "competition": 30,
+      "demographics": 0,
+      "accessibility": 35,
+      "market_saturation": 20,
+      "reachability": 0
+    },
+    "rating": "🔴 RISKY",
+    "recommendation": "Nicht empfohlen. Zu viele Risikofaktoren.",
+    "risk_factors": [
+      "Hohe Konkurrenz (8 Gyms im Umkreis)",
+      "Starke Konkurrenz: Mehrere gut bewertete Gyms",
+      "Geringe Zielgruppen-Dichte in der Umgebung",
+      "Schlechte ÖPNV-Anbindung",
+      "Geringe Reichweite: Wenig Gebiete in 10min zu Fuß erreichbar"
+    ],
+    "opportunities": []
+  }
+}
