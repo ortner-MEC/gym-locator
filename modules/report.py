@@ -28,11 +28,10 @@ class ReportGenerator:
         print("\n" + "-" * 70)
         print("DETAILSCORES:")
         scores = score_data['individual_scores']
-        print(f"   🏆 Konkurrenz-Dichte:      {scores['competition']}/100")
-        print(f"   👥 Zielgruppen-Score:      {scores['demographics']}/100")
-        print(f"   🚗 Erreichbarkeit:         {scores['accessibility']}/100")
-        print(f"   📈 Markt-Sättigung:        {scores['market_saturation']}/100")
-        print(f"   ⏱️  Reichweite (Fahrzeit): {scores['reachability']}/100")
+        print(f"   🏆 Konkurrenz:        {scores.get('competition', 0)}/100")
+        print(f"   🚗 Erreichbarkeit:    {scores.get('accessibility', 0)}/100")
+        print(f"   👥 Reichweite:        {scores.get('reachability', 0)}/100")
+        print(f"   🏠 Mietkosten:        {scores.get('rental', 0)}/100")
         
         # Competition Details with intelligent filtering
         comp = analysis_data.get('competition', {})

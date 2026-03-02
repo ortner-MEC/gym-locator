@@ -1,0 +1,347 @@
+{
+  "address": "Calle Miguel Unamuno 3, San Pedro del Pinatar",
+  "timestamp": "2026-03-02T16:31:32.879113",
+  "analysis": {
+    "competition": {
+      "count": 0,
+      "total_found": 20,
+      "competitors": [],
+      "filtered_out": [
+        {
+          "name": "Pabellon Municipal Príncipe de Asturias",
+          "rating": 4.2,
+          "review_count": 484,
+          "distance_m": 1290.1758134028705,
+          "distance_km": 1.29,
+          "category": "not_competition",
+          "gym_score": 3,
+          "false_score": 5,
+          "is_real_competition": false
+        },
+        {
+          "name": "Municipal swimming pool Aqualia",
+          "rating": 4.3,
+          "review_count": 435,
+          "distance_m": 1201.9028041282565,
+          "distance_km": 1.2,
+          "category": "not_competition",
+          "gym_score": 3,
+          "false_score": 10,
+          "is_real_competition": false
+        },
+        {
+          "name": "Skatepark San Pedro del Pintar",
+          "rating": 4.3,
+          "review_count": 331,
+          "distance_m": 646.5060903148867,
+          "distance_km": 0.65,
+          "category": "not_competition",
+          "gym_score": 3,
+          "false_score": 15,
+          "is_real_competition": false
+        },
+        {
+          "name": "Pabellón Auxiliar \"Cubo\" del Polideportivo Principe de Asturias",
+          "rating": 4.5,
+          "review_count": 63,
+          "distance_m": 1265.9701840931732,
+          "distance_km": 1.27,
+          "category": "not_competition",
+          "gym_score": 1,
+          "false_score": 10,
+          "is_real_competition": false
+        },
+        {
+          "name": "Shala Ahimsa Yoga Studio",
+          "rating": 5,
+          "review_count": 43,
+          "distance_m": 148.42061617843314,
+          "distance_km": 0.15,
+          "category": "not_competition",
+          "gym_score": 0,
+          "false_score": 10,
+          "is_real_competition": false
+        },
+        {
+          "name": "Marlo studio",
+          "rating": 5,
+          "review_count": 29,
+          "distance_m": 722.7148098820632,
+          "distance_km": 0.72,
+          "category": "not_competition",
+          "gym_score": 0,
+          "false_score": 5,
+          "is_real_competition": false
+        },
+        {
+          "name": "C.A.R.",
+          "rating": 4.9,
+          "review_count": 17,
+          "distance_m": 760.3172977580107,
+          "distance_km": 0.76,
+          "category": "not_competition",
+          "gym_score": 0,
+          "false_score": 0,
+          "is_real_competition": false
+        },
+        {
+          "name": "CLUB DE BOXEO PINATAR . SPORTS CENTER 12 ROUNDS",
+          "rating": 5,
+          "review_count": 16,
+          "distance_m": 45.760882857395124,
+          "distance_km": 0.05,
+          "category": "not_competition",
+          "gym_score": 3,
+          "false_score": 5,
+          "is_real_competition": false
+        },
+        {
+          "name": "Centro Prana yoga",
+          "rating": 4.5,
+          "review_count": 13,
+          "distance_m": 484.33645677841446,
+          "distance_km": 0.48,
+          "category": "not_competition",
+          "gym_score": 0,
+          "false_score": 5,
+          "is_real_competition": false
+        },
+        {
+          "name": "Centro de Entrenamiento FitGirls Studio",
+          "rating": 5,
+          "review_count": 11,
+          "distance_m": 125.31873509054498,
+          "distance_km": 0.13,
+          "category": "not_competition",
+          "gym_score": 0,
+          "false_score": 5,
+          "is_real_competition": false
+        },
+        {
+          "name": "Circuito Pinatar",
+          "rating": 5,
+          "review_count": 1,
+          "distance_m": 1241.1247961965116,
+          "distance_km": 1.24,
+          "category": "not_competition",
+          "gym_score": -2,
+          "false_score": 0,
+          "is_real_competition": false
+        },
+        {
+          "name": "Centro De Yoga Solar",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 1685.7968031175985,
+          "distance_km": 1.69,
+          "category": "not_competition",
+          "gym_score": -2,
+          "false_score": 5,
+          "is_real_competition": false
+        },
+        {
+          "name": "San pedro",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 1586.7096019388612,
+          "distance_km": 1.59,
+          "category": "not_competition",
+          "gym_score": -2,
+          "false_score": 0,
+          "is_real_competition": false
+        }
+      ],
+      "possible": [
+        {
+          "name": "Pinatar Arena",
+          "rating": 4.3,
+          "review_count": 1017,
+          "distance_m": 1798.6094371677045,
+          "distance_km": 1.8,
+          "category": "possible_competitor",
+          "gym_score": 3,
+          "false_score": 0,
+          "is_real_competition": false
+        },
+        {
+          "name": "MK GYM",
+          "rating": 4.6,
+          "review_count": 61,
+          "distance_m": 155.62912219869995,
+          "distance_km": 0.16,
+          "category": "possible_competitor",
+          "gym_score": 4,
+          "false_score": 0,
+          "is_real_competition": false
+        },
+        {
+          "name": "Genesis Gym Club",
+          "rating": 4.6,
+          "review_count": 47,
+          "distance_m": 1941.1755872042745,
+          "distance_km": 1.94,
+          "category": "possible_competitor",
+          "gym_score": 3,
+          "false_score": 0,
+          "is_real_competition": false
+        },
+        {
+          "name": "The Fitness Factory",
+          "rating": 4.9,
+          "review_count": 39,
+          "distance_m": 530.2851739687637,
+          "distance_km": 0.53,
+          "category": "possible_competitor",
+          "gym_score": 3,
+          "false_score": 0,
+          "is_real_competition": false
+        },
+        {
+          "name": "Crossfit BeTribe",
+          "rating": 5,
+          "review_count": 33,
+          "distance_m": 1750.8700295457895,
+          "distance_km": 1.75,
+          "category": "possible_competitor",
+          "gym_score": 3,
+          "false_score": 0,
+          "is_real_competition": false
+        }
+      ],
+      "average_rating": 0,
+      "highly_rated_count": 0,
+      "avg_distance_m": null,
+      "closest_competitor": null,
+      "population_estimate": 25000,
+      "people_per_gym": "N/A",
+      "market_potential": 100,
+      "saturation": "none",
+      "filtering_explanation": [
+        "Von 20 Einträgen: 0 echte Gyms, 15 ausgeschlossen (Yoga, Boxen, etc.)"
+      ]
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 50,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 2,
+      "parking_count": 20,
+      "accessibility_score": 100,
+      "transport_types": [
+        "San Pedro del Pinatar",
+        "Lo Pagan"
+      ]
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 3,
+        "10min_reach": 19,
+        "15min_reach": 40,
+        "estimated_population_10min": 3705,
+        "coverage_percentage": 6.6,
+        "average_time": 27.1
+      },
+      "driving": {
+        "5min_reach": 13,
+        "10min_reach": 70,
+        "15min_reach": 72,
+        "estimated_population_10min": 54600
+      },
+      "score": 0
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Spanien",
+          "price": 2025,
+          "size": 250,
+          "price_per_m2": 8.1,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Spanien",
+          "price": 2565,
+          "size": 300,
+          "price_per_m2": 8.55,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Spanien",
+          "price": 3150,
+          "size": 350,
+          "price_per_m2": 9.0,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Spanien",
+          "price": 3780,
+          "size": 400,
+          "price_per_m2": 9.45,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Spanien",
+          "price": 4950,
+          "size": 500,
+          "price_per_m2": 9.9,
+          "location": "Spanien",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 9.0,
+      "monthly_estimate_350m2": 3150,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "coordinates": {
+      "lat": 37.8323348,
+      "lng": -0.7896643
+    }
+  },
+  "score": {
+    "total_score": 46.0,
+    "individual_scores": {
+      "competition": 50,
+      "demographics": 50,
+      "accessibility": 100,
+      "market_saturation": 100,
+      "reachability": 0
+    },
+    "rating": "🔴 RISKY",
+    "recommendation": "Nicht empfohlen. Zu viele Risikofaktoren.",
+    "risk_factors": [
+      "Geringe Reichweite: Wenig Gebiete in 10min zu Fuß erreichbar"
+    ],
+    "opportunities": [
+      "Keine direkte Konkurrenz – Blue Ocean!",
+      "Schwache Konkurrenz – Chance für besseren Service",
+      "Ausgezeichnete Erreichbarkeit"
+    ]
+  }
+}
