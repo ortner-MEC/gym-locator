@@ -192,6 +192,18 @@ class ReportGenerator:
         print(f"\n💾 Report gespeichert: {filename}")
         return filename
     
+    def save_detailed_report_prompt(self, address: str, prompt: str) -> str:
+        """Save detailed franchise report prompt to file."""
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        safe_address = address.replace(' ', '_').replace(',', '')[:30]
+        filename = f"{OUTPUT_DIR}/detailed_report_{safe_address}_{timestamp}.txt"
+        
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(prompt)
+        
+        print(f"   Detaillierter Report-Prompt gespeichert: {filename}")
+        return filename
+    
     def save_ki_prompt(self, address: str, prompt: str) -> str:
         """Save AI evaluation prompt to file."""
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')

@@ -173,7 +173,14 @@ def analyze_location(address: str, radius: int = DEFAULT_RADIUS_METERS):
     ki_prompt_path = reporter.save_ki_prompt(address, ki_prompt)
     print(f"   KI-Prompt gespeichert: {ki_prompt_path}")
     
-    return score_data, ki_prompt
+    # Stufe 2: Ausführliche Franchisenehmer-Analyse anbieten
+    print("\n📋 STUFE 2: Ausführliche Franchisenehmer-Analyse")
+    print("   Soll eine detaillierte Standortanalyse erstellt werden?")
+    print("   Format: Wie professionelles PDF mit allen Details")
+    print("   Dauer: ~5-10 Minuten zusätzlich")
+    print("   (Für Standard-Analyse: Antworte 'nein')")
+    
+    return score_data, ki_prompt, analysis_data  # analysis_data auch zurückgeben für Stufe 2
 
 def generate_ki_evaluation_prompt(address: str, data: Dict, score: Dict) -> str:
     """Generate a comprehensive prompt for AI evaluation."""
@@ -297,3 +304,105 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+def generate_detailed_franchise_report(address: str, data: Dict, score: Dict) -> str:
+    """Generate comprehensive franchise report (Stage 2) like the PDF example."""
+    comp = data.get('competition', {})
+    travel = data.get('travel_analysis', {})
+    rental = data.get('rental_market', {})
+    ine_data = data.get('ine_demographics', {})
+    
+    real_gyms = comp.get('real_competitors', [])
+    possible_gyms = comp.get('possible_competitors', [])
+    
+    # Build detailed gym descriptions
+    gym_details = []
+    for gym in real_gyms + possible_gyms[:3]:
+        gym_info = f"""
+**{gym['name']}**
+- Bewertung: {gym.get('rating', '-')}★ ({gym.get('review_count', 0)} Reviews)
+- Entfernung: {gym.get('distance_km', '?')}km
+- Kategorie: {gym.get('category', 'unknown')}
+- Einschätzung: {'Direkter Konkurrent' if gym.get('is_real_competition') else 'Mögliche Konkurrenz'}
+"""
+        gym_details.append(gym_info)
+    
+    walking = travel.get('walking', {})
+    driving = travel.get('driving', {})
+    
+    prompt = f"""DU BIST EIN SENIOR-BERATER FÜR FITNESS-FRANCHISE-INVESTOREN IN SPANIEN.
+
+Erstelle eine professionelle, ausführliche Standortanalyse im Stil eines Investment-Due-Diligence-Reports.
+
+=== STANDORT ===
+Adresse: {address}
+Koordinaten: {data.get('coordinates', {}).get('lat')}, {data.get('coordinates', {}).get('lng')}
+
+=== 1. DEMOGRAPHIC FOUNDATIONS ===
+
+BASISDATEN:
+- Gefundene Einwohner (statisch): {ine_data.get('demographics', {}).get('total_population', 'N/A')}
+- Zu Fuß erreichbar (10min): {walking.get('estimated_population_10min', 0):,} Menschen
+- Mit Auto erreichbar (10min): {driving.get('estimated_population_10min', 0):,} Menschen
+- Effektives Einzugsgebiet: ca. 25.000-60.000 Personen
+
+DEINE ANALYSE (basierend auf Lage in Spanien/Küstenregion):
+- Wie ist die Altersstruktur wahrscheinlich? (Rentner, Familien, junge Singles?)
+- Wirtschaftliche Lage: Durchschnittseinkommen eher niedrig/mittel/hoch?
+- Wachstumstrend: Wachsender oder stagnierender Ort?
+- Spezifische Demografie-Faktoren für diesen Standort
+
+=== 2. COMPETITIVE LANDSCAPE ===
+
+KONKURRENZ-ÜBERSICHT:
+Gefundene Einrichtungen: {comp.get('total_found', 0)}
+Echte Konkurrenten: {comp.get('real_count', 0)}
+Mögliche Konkurrenten: {len(possible_gyms)}
+
+DETAILLIERTE KONKURRENZANALYSE:
+{chr(10).join(gym_details) if gym_details else 'Keine relevante Konkurrenz gefunden.'}
+
+MARKTMETRIKEN:
+- Einwohner pro Gym: {comp.get('people_per_gym', 'N/A')}
+- Marktpotenzial: {comp.get('market_potential', 'N/A')}/100
+- Marktsättigung: {comp.get('saturation', 'unknown').upper()}
+
+=== 3. STANDORTBEWERTUNG & EMPFEHLUNG ===
+
+MIETKOSTEN & STANDORT:
+- Durchschnittliche Miete: {rental.get('average_price_per_m2', 'N/A')}€/m²
+- Geschätzte Miete 350m²: {rental.get('monthly_estimate_350m2', 'N/A')}€/Monat
+- Bewertung: {rental.get('market_rating', 'N/A')}
+
+GESAMTBEWERTUNG:
+Algorithmus-Score: {score.get('total_score', 'N/A')}/100
+Einzelscores:
+- Konkurrenz: {score.get('individual_scores', {}).get('competition', 'N/A')}/100
+- Erreichbarkeit: {score.get('individual_scores', {}).get('accessibility', 'N/A')}/100  
+- Reichweite: {score.get('individual_scores', {}).get('reachability', 'N/A')}/100
+- Mietkosten: {score.get('individual_scores', {}).get('rental', 'N/A')}/100
+
+=== DEINE AUFGABE ===
+
+Schreibe eine professionelle, 2-3 seitige Standortanalyse für Franchise-Investoren:
+
+**Struktur:**
+1. EXECUTIVE SUMMARY (3-4 Sätze mit klarem Go/No-Go)
+2. MARKTANALYSE (Demografie, Einzugsgebiet, Wachstum)
+3. KONKURRENZSITUATION (Detaillierte Beschreibung jedes Gyms, deren Stärken/Schwächen)
+4. STANDORTBEWERTUNG (Mieten, Erreichbarkeit, Sichtbarkeit)
+5. RISIKEN & CHANCEN (Konkrete Punkte mit Bewertung)
+6. EMPFEHLUNG & NÄCHSTE SCHRITTE (Konkrete Handlungsempfehlung)
+
+**Ton:** Professionell, analytisch, aber verständlich. Wie ein Due-Diligence-Report.
+
+**Besonderes Augenmerk:**
+- Gib für jeden Konkurrenten eine konkrete Einschätzung (modern/altmodisch, gut/schlecht bewertet)
+- Schätze die reale Einwohnerzahl (nicht nur offizielle Zahlen)
+- Bewerte ob die Mietkosten tragbar sind (9€/m² = moderat)
+- Empfehle konkrete Strategie für diesen Standort
+
+Antworte in DEUTSCH, strukturiert mit Überschriften."""
+    
+    return prompt
