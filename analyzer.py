@@ -122,31 +122,15 @@ def analyze_location(address: str, radius: int = DEFAULT_RADIUS_METERS):
     
     # NEW: Web search for demographic data as fallback/enhancement
     web_demographics = {}
-    print(f"\n🌐 Suche Demografie-Daten im Web...")
-    try:
-        from web_search import web_search
-        city_clean = city.replace(' ', '+')
-        search_query = f"{city} Murcia demografia poblacion renta ine 2024"
-        web_results = web_search(search_query, count=5)
-        
-        if web_results and 'results' in web_results:
-            # Extract relevant info from snippets
-            web_info = []
-            for result in web_results['results'][:3]:
-                snippet = result.get('description', '')
-                if snippet:
-                    web_info.append(snippet[:200])
-            
-            web_demographics = {
-                'source': 'web_search',
-                'snippets': web_info,
-                'query': search_query
-            }
-            print(f"   ✅ Web-Daten gefunden ({len(web_info)} Ergebnisse)")
-        else:
-            print("   ⚠️ Keine Web-Daten verfügbar")
-    except Exception as e:
-        print(f"   ⚠️ Web-Suche fehlgeschlagen: {e}")
+    print(f"\n🌐 Web-Suche vorbereitet (manuell nach Analyse)")
+    # Hinweis: Web-Suche wird separat durchgeführt, da Tool-Integration aus Python nicht möglich
+    # Query für spätere Nutzung speichern:
+    web_demographics = {
+        'source': 'web_search_pending',
+        'query_es': f"{city} Murcia demografia poblacion renta ine",
+        'query_en': f"{city} Murcia population demographics income",
+        'status': 'Run manually after analysis'
+    }
     
     # NEW: Fotocasa rental market analysis
     print("\n🏠 Analysiere Mietmarkt (Fotocasa)...")
