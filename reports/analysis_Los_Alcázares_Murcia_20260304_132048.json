@@ -1,0 +1,548 @@
+{
+  "address": "Los Alcázares, Murcia",
+  "timestamp": "2026-03-04T13:20:48.968812",
+  "analysis": {
+    "competition": {
+      "total_found": 10,
+      "real_competitors": [
+        {
+          "name": "La Palestra",
+          "rating": 4.5,
+          "review_count": 137,
+          "distance_m": 1167.974184161269,
+          "distance_km": 1.17,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 10,
+            "not_gym_score": 2,
+            "net_score": 8,
+            "gym_matches": [
+              "weights",
+              "gym",
+              "weight room",
+              "⭐free weights"
+            ],
+            "not_gym_matches": [
+              "boxing ring",
+              "judo"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_1_ATCDNfVxvsStnMLLQuBg.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_2_ATCDNfVjZTrEhGdq04km.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_3_ATCDNfUp7HtbF2lWnNzs.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_4_ATCDNfU8KPcjZgIODceo.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_5_ATCDNfVFUWxzBvXwVV6Q.jpg"
+          ]
+        },
+        {
+          "name": "Good Body Fitness",
+          "rating": 4.1,
+          "review_count": 142,
+          "distance_m": 1790.0896038217654,
+          "distance_km": 1.79,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 14,
+            "not_gym_score": 0,
+            "net_score": 14,
+            "gym_matches": [
+              "weights",
+              "machines",
+              "gym",
+              "⭐free weights",
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Good_Body_Fitness_1_ATCDNfUlkszVzRwNhMkt.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Good_Body_Fitness_2_ATCDNfWMDgMxerGS5N0B.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Good_Body_Fitness_3_ATCDNfXYl6q30rvbAeXd.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Good_Body_Fitness_4_ATCDNfX_61ib43scEh_p.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Good_Body_Fitness_5_ATCDNfX8k4NpbTKEC51L.jpg"
+          ]
+        }
+      ],
+      "real_count": 2,
+      "possible_competitors": [
+        {
+          "name": "CAR Región de Murcia",
+          "rating": 4.7,
+          "review_count": 227,
+          "distance_m": 974.5170291657612,
+          "distance_km": 0.97,
+          "category": "possible_competitor",
+          "confidence": 80,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 80,
+            "gym_score": 3,
+            "not_gym_score": 0,
+            "net_score": 3,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "fitness_center",
+            "primary_type_name": "Fitness center",
+            "website": "http://www.carmurcia.es/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/CAR_Regi_n_de_Murcia_1_ATCDNfXNOj0SFS7YFiNm.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CAR_Regi_n_de_Murcia_2_ATCDNfXGKRy1wV7dbax3.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CAR_Regi_n_de_Murcia_3_ATCDNfVBv0ILHc4SOpAV.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CAR_Regi_n_de_Murcia_4_ATCDNfUcraxq-B1khj4I.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CAR_Regi_n_de_Murcia_5_ATCDNfXwHkod5D3lOkpa.jpg"
+          ]
+        },
+        {
+          "name": "Punta Calera Spa Sport Centers",
+          "rating": 4.1,
+          "review_count": 221,
+          "distance_m": 1765.0096615047512,
+          "distance_km": 1.77,
+          "category": "possible_competitor",
+          "confidence": 80,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 80,
+            "gym_score": 5,
+            "not_gym_score": 2,
+            "net_score": 3,
+            "gym_matches": [
+              "press",
+              "gym"
+            ],
+            "not_gym_matches": [
+              "web:spa"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "http://www.centrodeportivolosalcazares.es/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Punta_Calera_Spa_Sport_Centers_ATCDNfVgdZv4C_5L780t.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Punta_Calera_Spa_Sport_Centers_ATCDNfUF8NbUKznjYv4H.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Punta_Calera_Spa_Sport_Centers_ATCDNfVuAGhzSNQGdr8F.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Punta_Calera_Spa_Sport_Centers_ATCDNfWCcJHo_llT4apw.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Punta_Calera_Spa_Sport_Centers_ATCDNfWA8IJNpkLte8vm.jpg"
+          ]
+        }
+      ],
+      "not_competition": [
+        {
+          "name": "Pista de Patinaje",
+          "rating": 3.6,
+          "review_count": 10,
+          "distance_m": 546.7222531431846,
+          "distance_km": 0.55,
+          "category": "not_competition",
+          "confidence": 84,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 84,
+            "gym_score": 1,
+            "not_gym_score": 4,
+            "net_score": -3,
+            "gym_matches": [
+              "rack"
+            ],
+            "not_gym_matches": [
+              "skate"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "sports_complex",
+            "primary_type_name": "Sports Complex",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pista_de_Patinaje_1_ATCDNfUsqPD9RmXaiB-I.jpg"
+          ]
+        },
+        {
+          "name": "Parque Calistenia Las Palmeras",
+          "rating": 4.6,
+          "review_count": 31,
+          "distance_m": 568.3308993035068,
+          "distance_km": 0.57,
+          "category": "unclear",
+          "confidence": 40,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 40,
+            "gym_score": 2,
+            "not_gym_score": 3,
+            "net_score": -1,
+            "gym_matches": [
+              "press",
+              "workout"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "sports_complex",
+            "primary_type_name": "Sports Complex",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Parque_Calistenia_Las_Palmeras_ATCDNfXtxIK_yjhXxEh_.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Parque_Calistenia_Las_Palmeras_ATCDNfWIrCuX-3tLeiqm.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Parque_Calistenia_Las_Palmeras_ATCDNfVvSJ8iqcknbFJA.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Parque_Calistenia_Las_Palmeras_ATCDNfX1fBRtpk7CPeY9.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Parque_Calistenia_Las_Palmeras_ATCDNfXJ5ul6JrVAJy_0.jpg"
+          ]
+        },
+        {
+          "name": "Centro De Vacaciones Animación Y Aventura",
+          "rating": 4.6,
+          "review_count": 107,
+          "distance_m": 884.3050157885654,
+          "distance_km": 0.88,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 3,
+            "not_gym_score": 2,
+            "net_score": 1,
+            "gym_matches": [
+              "barra",
+              "web:tarifa"
+            ],
+            "not_gym_matches": [
+              "polideportivo",
+              "municipal"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "hostel",
+            "primary_type_name": "Hostel",
+            "website": "http://www.animacionyaventura.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_De_Vacaciones_Animaci_n_ATCDNfVJojfa0U07hcV5.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_De_Vacaciones_Animaci_n_ATCDNfUEVhhlKmtjW3CM.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_De_Vacaciones_Animaci_n_ATCDNfUllCoOS25a8Hpe.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_De_Vacaciones_Animaci_n_ATCDNfUVCA9jka4qZM0F.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_De_Vacaciones_Animaci_n_ATCDNfWbCD0Y31TFF2qB.jpg"
+          ]
+        },
+        {
+          "name": "karate club los alcazares",
+          "rating": 4.9,
+          "review_count": 18,
+          "distance_m": 1239.4955109065786,
+          "distance_km": 1.24,
+          "category": "unclear",
+          "confidence": 40,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 40,
+            "gym_score": 0,
+            "not_gym_score": 1,
+            "net_score": -1,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "karate"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "sports_school",
+            "primary_type_name": "Sports School",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/karate_club_los_alcazares_1_ATCDNfUdVdBzyitRAQQw.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/karate_club_los_alcazares_2_ATCDNfUCpWVpSlB6gWR6.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/karate_club_los_alcazares_3_ATCDNfW6dHnU_GMFEeGP.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/karate_club_los_alcazares_4_ATCDNfWKimPfyYc2ASvX.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/karate_club_los_alcazares_5_ATCDNfV6XYD7vLBjoQjL.jpg"
+          ]
+        },
+        {
+          "name": "Centro Deportivo Los Alcázares",
+          "rating": 4.3,
+          "review_count": 477,
+          "distance_m": 1240.254271434474,
+          "distance_km": 1.24,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:centro deportivo"
+            ],
+            "review_count": 5,
+            "primary_type": "fitness_center",
+            "primary_type_name": "Fitness center",
+            "website": "http://www.centrodeportivolosalcazares.es/",
+            "has_editorial": false,
+            "has_website_data": true
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_Deportivo_Los_Alc_zares_ATCDNfW6Z_t-nbnn0y0m.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_Deportivo_Los_Alc_zares_ATCDNfU2tuyusDAmtwzr.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_Deportivo_Los_Alc_zares_ATCDNfU7sjkboEizRG9u.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_Deportivo_Los_Alc_zares_ATCDNfVGRLEpZIDr0kW5.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_Deportivo_Los_Alc_zares_ATCDNfXAVmHp-kUJQqiM.jpg"
+          ]
+        },
+        {
+          "name": "Tu Equilibrio Natural",
+          "rating": 5,
+          "review_count": 32,
+          "distance_m": 1489.9759744768876,
+          "distance_km": 1.49,
+          "category": "not_competition",
+          "confidence": 100,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 100,
+            "gym_score": 2,
+            "not_gym_score": 14,
+            "net_score": -12,
+            "gym_matches": [
+              "web:fitness"
+            ],
+            "not_gym_matches": [
+              "yoga",
+              "pilates",
+              "masaje"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "yoga_studio",
+            "primary_type_name": "Yoga Studio",
+            "website": "http://tuequilibrionatural.es/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Tu_Equilibrio_Natural_1_ATCDNfX_Os04f4iFmJ4G.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Tu_Equilibrio_Natural_2_ATCDNfX2PfBiMu7bE8pf.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Tu_Equilibrio_Natural_3_ATCDNfW2I849qdrOJ9cX.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Tu_Equilibrio_Natural_4_ATCDNfW1vKHvDz4AXdko.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Tu_Equilibrio_Natural_5_ATCDNfV3NUnB6M0pALHh.jpg"
+          ]
+        }
+      ],
+      "average_rating": 4.3,
+      "good_gyms_count": 2,
+      "closest_competitor": {
+        "name": "La Palestra",
+        "rating": 4.5,
+        "review_count": 137,
+        "distance_m": 1167.974184161269,
+        "distance_km": 1.17,
+        "category": "direct_competitor",
+        "confidence": 100,
+        "is_real_competition": true,
+        "analysis": {
+          "category": "direct_competitor",
+          "confidence": 100,
+          "gym_score": 10,
+          "not_gym_score": 2,
+          "net_score": 8,
+          "gym_matches": [
+            "weights",
+            "gym",
+            "weight room",
+            "⭐free weights"
+          ],
+          "not_gym_matches": [
+            "boxing ring",
+            "judo"
+          ],
+          "review_count": 5,
+          "has_website_data": false,
+          "primary_type": "gym",
+          "primary_type_name": "Gym",
+          "website": "",
+          "has_editorial": false
+        },
+        "photo_paths": [
+          "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_1_ATCDNfVxvsStnMLLQuBg.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_2_ATCDNfVjZTrEhGdq04km.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_3_ATCDNfUp7HtbF2lWnNzs.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_4_ATCDNfU8KPcjZgIODceo.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/La_Palestra_5_ATCDNfVFUWxzBvXwVV6Q.jpg"
+        ]
+      },
+      "avg_distance_m": 1479.0318939915173,
+      "population_estimate": 25000,
+      "people_per_gym": 12500,
+      "market_potential": 85,
+      "saturation": "very_low",
+      "filtering_explanation": [
+        "Von 10 Einträgen: 2 echte Gyms, 2 möglich, 6 ausgeschlossen",
+        "Nächstes Gym: La Palestra (1.17km)"
+      ],
+      "count": 2
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 50,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 2,
+      "parking_count": 20,
+      "accessibility_score": 100,
+      "transport_types": [
+        "Los Alcazares",
+        "Los Alcázares"
+      ]
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 7,
+        "10min_reach": 31,
+        "15min_reach": 46,
+        "estimated_population_10min": 6045,
+        "coverage_percentage": 10.7,
+        "average_time": 25.3
+      },
+      "driving": {
+        "5min_reach": 32,
+        "10min_reach": 72,
+        "15min_reach": 72,
+        "estimated_population_10min": 56160
+      },
+      "score": 1
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Spanien",
+          "price": 2025,
+          "size": 250,
+          "price_per_m2": 8.1,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Spanien",
+          "price": 2565,
+          "size": 300,
+          "price_per_m2": 8.55,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Spanien",
+          "price": 3150,
+          "size": 350,
+          "price_per_m2": 9.0,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Spanien",
+          "price": 3780,
+          "size": 400,
+          "price_per_m2": 9.45,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Spanien",
+          "price": 4950,
+          "size": 500,
+          "price_per_m2": 9.9,
+          "location": "Spanien",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 9.0,
+      "monthly_estimate_350m2": 3150,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "coordinates": {
+      "lat": 37.7481843,
+      "lng": -0.8480654999999999
+    }
+  },
+  "score": {
+    "total_score": 81.7,
+    "individual_scores": {
+      "competition": 82.0,
+      "accessibility": 100,
+      "reachability": 92.0,
+      "rental": 50
+    },
+    "rating": "🟢 EXCELLENT",
+    "recommendation": "Hoch empfohlen! Sehr gute Bedingungen für SmartGym.",
+    "risk_factors": [],
+    "opportunities": [
+      "Wenig Konkurrenz: Nur 2 echte Gyms",
+      "Unterversorgter Markt: 12500 Einwohner/Gym",
+      "Gute Parksituation (20 Parkplätze)",
+      "Gute Erreichbarkeit (ÖPNV + Parken)",
+      "Großes Auto-Einzugsgebiet: 56,160 in 10min"
+    ]
+  }
+}

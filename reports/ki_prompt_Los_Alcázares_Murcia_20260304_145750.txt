@@ -1,0 +1,65 @@
+DU BIST EIN EXPERTE FÜR FITNESS-STUDIO-STANDORTE IN SPANIEN. Gib ein professionelles Gutachten ab.
+
+=== DEMOGRAFIE-DATEN ===
+INE-Daten: Nicht verfügbar
+Web-Recherche: Nicht verfügbar
+
+
+=== STANDORT ===
+Adresse: Los Alcázares, Murcia
+Koordinaten: 37.7481843, -0.8480654999999999
+
+=== KONKURRENZANALYSE ===
+Gefundene Gyms: 10
+Echte Konkurrenten: 2
+Details:  - La Palestra (4.5★, 1.17km, direct_competitor)
+  - Good Body Fitness (4.1★, 1.79km, direct_competitor)
+
+Nächster Konkurrent: La Palestra (1.17km)
+
+Markt-Metriken:
+- Einwohner pro Gym: 12500
+- Marktpotenzial: 85/100
+- Marktsättigung: very_low
+
+=== REICHWEITE (FAHRZEIT-ISOCHRONEN) ===
+Zu Fuß (10min): 6,045 Menschen (31 Zonen)
+Mit Auto (10min): 56,160 Menschen (72 Zonen)
+
+=== MIETMARKT ===
+Durchschnitt: 9.0€/m²
+Schätzung 350m²: 3150€/Monat
+Bewertung: 🟡 Moderat
+
+=== ALGORITHMUS-SCORING ===
+Gesamtpunktzahl: 81.7/100
+Einzelscores:
+- Konkurrenz: 82.0/100
+- Erreichbarkeit: 100/100
+- Reichweite: 92.0/100
+- Mietkosten: 50/100
+
+=== DEINE AUFGABE ===
+Gib eine PROFESSIONELLE BEWERTUNG (Skala 0-100) mit Begründung:
+
+1. **Gesamtbewertung (0-100):** Eine konkrete Zahl basierend auf allen Faktoren
+   - 90-100: Herausragend, sofortiger Go
+   - 80-89: Sehr gut, klare Empfehlung  
+   - 65-79: Gut, aber mit Risiken/Anpassungen
+   - 50-64: Durchschnitt, nur mit Spezialstrategie
+   - 0-49: Abgelehnt, zu viele rote Fahnen
+
+2. **Begründung (3-4 Sätze):** Warum diese Zahl? Welche Faktoren wie gewichten?
+
+3. **Haupt-Risiken (1-2 Punkte):** Was könnte schiefgehen?
+
+4. **Haupt-Chancen (1-2 Punkte):** Wo liegt das Potenzial?
+
+5. **Strategie-Empfehlung (1 Satz):** Konkrete Handlungsempfehlung
+
+Antworte in DEUTSCH. Format:
+**Bewertung: [Zahl]/100**
+**Begründung:** [Text]
+**Risiken:** [Text]
+**Chancen:** [Text]  
+**Strategie:** [Text]
