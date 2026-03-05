@@ -1,0 +1,915 @@
+{
+  "address": "Santa Pola, Alicante, Spain",
+  "timestamp": "2026-03-04T17:38:16.738339",
+  "analysis": {
+    "competition": {
+      "total_found": 20,
+      "real_competitors": [
+        {
+          "name": "Gimnàs Manhattan",
+          "rating": 4.9,
+          "review_count": 68,
+          "distance_m": 334.6326384642714,
+          "distance_km": 0.33,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 48,
+            "not_gym_score": 0,
+            "net_score": 48,
+            "gym_matches": [
+              "máquinas",
+              "maquinas",
+              "rack",
+              "web:maquinas",
+              "web:máquinas"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "https://gimnasios.fitness/es/i/6311-gimnasio-manhattan/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_1_ATCDNfU9AULNA-fblbP7.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_2_ATCDNfWDomg0qqx0IOkr.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_3_ATCDNfXwMnVtu32MC3GV.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_4_ATCDNfXsK7-RIT527uee.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_5_ATCDNfW1w7CVOKI_I8k6.jpg"
+          ]
+        },
+        {
+          "name": "Gym Noray",
+          "rating": 4.6,
+          "review_count": 152,
+          "distance_m": 531.4781385032659,
+          "distance_km": 0.53,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 17,
+            "not_gym_score": 6,
+            "net_score": 11,
+            "gym_matches": [
+              "weights",
+              "treadmill",
+              "machines",
+              "⭐free weights",
+              "⭐bodybuilding"
+            ],
+            "not_gym_matches": [
+              "yoga",
+              "dance",
+              "web:yoga"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "http://www.gymnoray.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gym_Noray_1_ATCDNfVlOxSAQrEp7gPi.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gym_Noray_2_ATCDNfUcCOjKlDnQUiZ6.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gym_Noray_3_ATCDNfUzeJXLoidPnfea.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gym_Noray_4_ATCDNfUEFrLbfsD_Vx1i.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Gym_Noray_5_ATCDNfXRz4ByVCWrirup.jpg"
+          ]
+        },
+        {
+          "name": "VLC Fitness",
+          "rating": 5,
+          "review_count": 4,
+          "distance_m": 703.8018543484565,
+          "distance_km": 0.7,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 6,
+            "not_gym_score": 0,
+            "net_score": 6,
+            "gym_matches": [
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 4,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "https://www.vlcfitnesssantapola.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/VLC_Fitness_1_ATCDNfUBpX5ZHU19uFRm.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/VLC_Fitness_2_ATCDNfVTl3z9WQAj89Nf.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/VLC_Fitness_3_ATCDNfVLtPaAXAOALKlB.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/VLC_Fitness_4_ATCDNfWbV8qEKZngpKD8.jpg"
+          ]
+        },
+        {
+          "name": "Marsport Gym & Yoga",
+          "rating": 4.7,
+          "review_count": 39,
+          "distance_m": 757.4597242694224,
+          "distance_km": 0.76,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 25,
+            "not_gym_score": 12,
+            "net_score": 13,
+            "gym_matches": [
+              "máquinas",
+              "mancuernas",
+              "weights",
+              "web:máquinas",
+              "web:mancuernas"
+            ],
+            "not_gym_matches": [
+              "yoga",
+              "pilates",
+              "tiro"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "yoga_studio",
+            "primary_type_name": "Yoga Studio",
+            "website": "https://lamardeyoga.es/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Marsport_Gym___Yoga_1_ATCDNfW9IlLudGyVOHX7.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Marsport_Gym___Yoga_2_ATCDNfWc97Pg1v9PSDwr.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Marsport_Gym___Yoga_3_ATCDNfWWNx-zDQC_LOjQ.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Marsport_Gym___Yoga_4_ATCDNfUeHe0R4A3iR4Ma.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Marsport_Gym___Yoga_5_ATCDNfVKA1xKf25xeo1W.jpg"
+          ]
+        },
+        {
+          "name": "GYM POLAMAX",
+          "rating": 4.4,
+          "review_count": 272,
+          "distance_m": 1373.646074954397,
+          "distance_km": 1.37,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 21,
+            "not_gym_score": 9,
+            "net_score": 12,
+            "gym_matches": [
+              "máquinas",
+              "pesas",
+              "press",
+              "web:máquinas",
+              "web:pesas"
+            ],
+            "not_gym_matches": [
+              "pilates",
+              "judo",
+              "baile"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "http://www.gympolamax.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/GYM_POLAMAX_1_ATCDNfXvZq72DkX-ghLt.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/GYM_POLAMAX_2_ATCDNfVgW4w9-2oaRw9o.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/GYM_POLAMAX_3_ATCDNfUyUB0GACkaPIwb.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/GYM_POLAMAX_4_ATCDNfXE3Vn-oU6BVP5G.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/GYM_POLAMAX_5_ATCDNfVGi2URhB4RjvGW.jpg"
+          ]
+        }
+      ],
+      "real_count": 5,
+      "possible_competitors": [
+        {
+          "name": "Pabelló Silvia Martínez",
+          "rating": 4.3,
+          "review_count": 99,
+          "distance_m": 418.55691372533767,
+          "distance_km": 0.42,
+          "category": "possible_competitor",
+          "confidence": 80,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 80,
+            "gym_score": 3,
+            "not_gym_score": 0,
+            "net_score": 3,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell__Silvia_Mart_nez_1_ATCDNfVEwmbcusoczrKy.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell__Silvia_Mart_nez_2_ATCDNfVlD78GA3_Ci1NO.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell__Silvia_Mart_nez_3_ATCDNfX6Nv9A-8AZuqCH.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell__Silvia_Mart_nez_4_ATCDNfVrvbFgpavlvL6L.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell__Silvia_Mart_nez_5_ATCDNfUROQIXbKfaEHJU.jpg"
+          ]
+        },
+        {
+          "name": "WATER SPORTS ALICANTE",
+          "rating": 4.5,
+          "review_count": 59,
+          "distance_m": 617.6312521188536,
+          "distance_km": 0.62,
+          "category": "possible_competitor",
+          "confidence": 70,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 70,
+            "gym_score": 2,
+            "not_gym_score": 0,
+            "net_score": 2,
+            "gym_matches": [
+              "web:tarifa"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "service",
+            "primary_type_name": "Services",
+            "website": "https://watersportsalicante.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/WATER_SPORTS_ALICANTE_1_ATCDNfVOJnS8eMx9yUXQ.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/WATER_SPORTS_ALICANTE_2_ATCDNfUYbesJ_l02Khsu.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/WATER_SPORTS_ALICANTE_3_ATCDNfU9Ojx-bi8I_lQY.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/WATER_SPORTS_ALICANTE_4_ATCDNfUkPZz051G_CB0I.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/WATER_SPORTS_ALICANTE_5_ATCDNfV8Prra-dG16K0D.jpg"
+          ]
+        },
+        {
+          "name": "TOSKA SPORT CENTER",
+          "rating": 4.7,
+          "review_count": 80,
+          "distance_m": 868.3606952090224,
+          "distance_km": 0.87,
+          "category": "possible_competitor",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 90,
+            "gym_score": 4,
+            "not_gym_score": 0,
+            "net_score": 4,
+            "gym_matches": [
+              "gym"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/TOSKA_SPORT_CENTER_1_ATCDNfXE0y9lXWLM6UR-.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/TOSKA_SPORT_CENTER_2_ATCDNfUFtWViyBpfRZ3W.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/TOSKA_SPORT_CENTER_3_ATCDNfUJJCuPube_VdZy.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/TOSKA_SPORT_CENTER_4_ATCDNfUYYDG5-2NiDFmd.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/TOSKA_SPORT_CENTER_5_ATCDNfV7YglyT52FUZo9.jpg"
+          ]
+        },
+        {
+          "name": "CrossFit 03130",
+          "rating": 4.7,
+          "review_count": 87,
+          "distance_m": 1833.0181035770183,
+          "distance_km": 1.83,
+          "category": "possible_competitor",
+          "confidence": 60,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 60,
+            "gym_score": 23,
+            "not_gym_score": 5,
+            "net_score": 18,
+            "gym_matches": [
+              "pesas",
+              "rack",
+              "gym",
+              "web:pesas",
+              "web:rack"
+            ],
+            "not_gym_matches": [
+              "crossfit",
+              "web:spa",
+              "web:crossfit"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "fitness_center",
+            "primary_type_name": "Fitness center",
+            "website": "https://cf03130.wodbuster.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/CrossFit_03130_1_ATCDNfX3IhplnwSkp3Ik.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CrossFit_03130_2_ATCDNfWdGOo5byOCZ3TH.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CrossFit_03130_3_ATCDNfWXiSNDveRO2el6.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CrossFit_03130_4_ATCDNfXBJp8yamahJSZV.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/CrossFit_03130_5_ATCDNfWRUJ27ZnFpBekL.jpg"
+          ]
+        }
+      ],
+      "not_competition": [
+        {
+          "name": "Campo Municipal Manolo Maciá",
+          "rating": 4,
+          "review_count": 169,
+          "distance_m": 404.0630607371095,
+          "distance_km": 0.4,
+          "category": "not_competition",
+          "confidence": 92,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 92,
+            "gym_score": 0,
+            "not_gym_score": 4,
+            "net_score": -4,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "municipal"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "sports_complex",
+            "primary_type_name": "Sports Complex",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Campo_Municipal_Manolo_Maci__1_ATCDNfXWxEhYCGiXYfT5.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Campo_Municipal_Manolo_Maci__2_ATCDNfVIsUL22pMVcZPM.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Campo_Municipal_Manolo_Maci__3_ATCDNfUCHKWb2OMaBm67.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Campo_Municipal_Manolo_Maci__4_ATCDNfVzilvvgG-Nka2L.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Campo_Municipal_Manolo_Maci__5_ATCDNfW2R6ZvXdXAAf7C.jpg"
+          ]
+        },
+        {
+          "name": "Druni Perfumerías ®",
+          "rating": 4.4,
+          "review_count": 220,
+          "distance_m": 435.37365056419605,
+          "distance_km": 0.44,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 0,
+            "not_gym_score": 0,
+            "net_score": 0,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "clothing_store",
+            "primary_type_name": "Clothing Store",
+            "website": "https://www.druni.es/?utm_campaign=localistico&utm_medium=194&utm_source=google_gmb",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Druni_Perfumer_as___1_ATCDNfVaQz-YXog0LItG.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Druni_Perfumer_as___2_ATCDNfVmCyXQTCGnKfVO.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Druni_Perfumer_as___3_ATCDNfUeYY8rnc5naWeb.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Druni_Perfumer_as___4_ATCDNfXi8UJqKAozcp5f.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Druni_Perfumer_as___5_ATCDNfVkHU4mhUD7QTRk.jpg"
+          ]
+        },
+        {
+          "name": "Bar Tango",
+          "rating": 4.3,
+          "review_count": 378,
+          "distance_m": 549.6877301507185,
+          "distance_km": 0.55,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 0,
+            "not_gym_score": 0,
+            "net_score": 0,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "cafe",
+            "primary_type_name": "Cafe",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Bar_Tango_1_ATCDNfWWPvUY2OXvFY-N.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Bar_Tango_2_ATCDNfUUAA-SzpKsJTt_.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Bar_Tango_3_ATCDNfWY-v3xv1gGnHfx.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Bar_Tango_4_ATCDNfXDpdZYCZfIYn9P.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Bar_Tango_5_ATCDNfWGAcrSNk5_recm.jpg"
+          ]
+        },
+        {
+          "name": "Centro de Buceo Padi Scuba Elx Santa Pola - Tabarca",
+          "rating": 4.6,
+          "review_count": 664,
+          "distance_m": 581.6181795775827,
+          "distance_km": 0.58,
+          "category": "not_competition",
+          "confidence": 84,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 84,
+            "gym_score": 0,
+            "not_gym_score": 3,
+            "net_score": -3,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "swimming",
+              "web:spa"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "sports_activity_location",
+            "primary_type_name": "Sports Activity Location",
+            "website": "https://scubaelx.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_de_Buceo_Padi_Scuba_Elx_ATCDNfXaWIAIEQ_Jib9N.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_de_Buceo_Padi_Scuba_Elx_ATCDNfXdPBs6qHNrZOvX.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_de_Buceo_Padi_Scuba_Elx_ATCDNfXwVMSU6k3U8Ljq.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_de_Buceo_Padi_Scuba_Elx_ATCDNfWvQba-F6KpvzVi.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Centro_de_Buceo_Padi_Scuba_Elx_ATCDNfVAVSo_ul9AQFjo.jpg"
+          ]
+        },
+        {
+          "name": "Dive Academy Santa Pola, bucear en Tabarca",
+          "rating": 4.9,
+          "review_count": 1122,
+          "distance_m": 647.9655032475463,
+          "distance_km": 0.65,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 3,
+            "not_gym_score": 2,
+            "net_score": 1,
+            "gym_matches": [
+              "press",
+              "web:entrenamiento"
+            ],
+            "not_gym_matches": [
+              "web:spa"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "sports_activity_location",
+            "primary_type_name": "Sports Activity Location",
+            "website": "https://www.diveacademy-santapola.es/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Dive_Academy_Santa_Pola__bucea_ATCDNfVCUA3UIQW1M2-0.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Dive_Academy_Santa_Pola__bucea_ATCDNfUEU9Mj6Mgr_04x.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Dive_Academy_Santa_Pola__bucea_ATCDNfV5Uoj4oTnnkSjl.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Dive_Academy_Santa_Pola__bucea_ATCDNfWTRcOTRTKajuVO.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Dive_Academy_Santa_Pola__bucea_ATCDNfX0_KhFJSivd6F7.jpg"
+          ]
+        },
+        {
+          "name": "Pura Aventura, Deportes de Aventura en Santa Pola",
+          "rating": 4.9,
+          "review_count": 63,
+          "distance_m": 650.1993366753926,
+          "distance_km": 0.65,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 4,
+            "not_gym_score": 3,
+            "net_score": 1,
+            "gym_matches": [
+              "barra",
+              "⭐arena"
+            ],
+            "not_gym_matches": [
+              "tiro",
+              "web:spa"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "adventure_sports_center",
+            "primary_type_name": "Adventure Sports Center",
+            "website": "http://www.puraventuraspain.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pura_Aventura__Deportes_de_Ave_ATCDNfUgSOXtx5Ri3iAa.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pura_Aventura__Deportes_de_Ave_ATCDNfV9Qz_Rwc0tBXjX.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pura_Aventura__Deportes_de_Ave_ATCDNfXYBVTp3MALLCa_.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pura_Aventura__Deportes_de_Ave_ATCDNfVtE6pumPKSqKT6.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pura_Aventura__Deportes_de_Ave_ATCDNfXNvETESUxSFgzn.jpg"
+          ]
+        },
+        {
+          "name": "Water Sports Santa Pola",
+          "rating": 4.6,
+          "review_count": 776,
+          "distance_m": 685.4744237599233,
+          "distance_km": 0.69,
+          "category": "unclear",
+          "confidence": 40,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 40,
+            "gym_score": 0,
+            "not_gym_score": 2,
+            "net_score": -2,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "web:monitores"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "service",
+            "primary_type_name": "Services",
+            "website": "https://watersportsantapola.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Water_Sports_Santa_Pola_1_ATCDNfUUyg_boWoe-lik.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Water_Sports_Santa_Pola_2_ATCDNfXF1VtLM6Siy1bP.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Water_Sports_Santa_Pola_3_ATCDNfUC9P7BRyz3Hs4t.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Water_Sports_Santa_Pola_4_ATCDNfUmbZoxw1glxJuA.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Water_Sports_Santa_Pola_5_ATCDNfUwGJnsQbpu5JM4.jpg"
+          ]
+        },
+        {
+          "name": "Más Happy Yoga - Pilates - Retiros - Santa Pola",
+          "rating": 4.7,
+          "review_count": 23,
+          "distance_m": 981.5213877858677,
+          "distance_km": 0.98,
+          "category": "not_competition",
+          "confidence": 100,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 100,
+            "gym_score": 0,
+            "not_gym_score": 6,
+            "net_score": -6,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "yoga",
+              "pilates",
+              "tiro"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "yoga_studio",
+            "primary_type_name": "Yoga Studio",
+            "website": "http://www.mashappyyoga.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/M_s_Happy_Yoga___Pilates___Ret_ATCDNfWt8LxMsvHAuF5H.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/M_s_Happy_Yoga___Pilates___Ret_ATCDNfVqgYDvoXF4ulLh.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/M_s_Happy_Yoga___Pilates___Ret_ATCDNfWYnGpcFq7qoAle.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/M_s_Happy_Yoga___Pilates___Ret_ATCDNfWNogBriukQqrTF.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/M_s_Happy_Yoga___Pilates___Ret_ATCDNfU9g2OoEDfCm2wi.jpg"
+          ]
+        },
+        {
+          "name": "Skatepark Santa Pola",
+          "rating": 4.4,
+          "review_count": 701,
+          "distance_m": 1143.8126880856032,
+          "distance_km": 1.14,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:skatepark"
+            ],
+            "review_count": 5,
+            "primary_type": "skateboard_park",
+            "primary_type_name": "Skatepark",
+            "website": "http://www.clubdracskatepark.com/",
+            "has_editorial": false,
+            "has_website_data": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_Santa_Pola_1_ATCDNfUYeQvgL2r37z6v.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_Santa_Pola_2_ATCDNfXFKEkvyEhrdAO6.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_Santa_Pola_3_ATCDNfWS4mhOY5ESRyzj.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_Santa_Pola_4_ATCDNfV85jt-MLu3WD3N.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_Santa_Pola_5_ATCDNfWeCSuHLxZAa3fq.jpg"
+          ]
+        },
+        {
+          "name": "Pavelló Municipal Els Xiprerets",
+          "rating": 4.2,
+          "review_count": 135,
+          "distance_m": 1210.400271370344,
+          "distance_km": 1.21,
+          "category": "not_competition",
+          "confidence": 100,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 100,
+            "gym_score": 0,
+            "not_gym_score": 5,
+            "net_score": -5,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "municipal",
+              "skate"
+            ],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "sports_complex",
+            "primary_type_name": "Sports Complex",
+            "website": "http://comunitatvalenciana.com/donde-ir/costa-blanca/santa-pola/polideportivo/pabellon-cubierto-els-xiprerets",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pavell__Municipal_Els_Xipreret_ATCDNfVPQJgTqMOsUeev.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pavell__Municipal_Els_Xipreret_ATCDNfWZ0CcJOLixBhdv.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pavell__Municipal_Els_Xipreret_ATCDNfXRmGEUHhbUbqcN.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pavell__Municipal_Els_Xipreret_ATCDNfXd0jx6SnvgI62E.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pavell__Municipal_Els_Xipreret_ATCDNfW5CiszvOq9eQ0m.jpg"
+          ]
+        },
+        {
+          "name": "Club Windsurf Santa Pola",
+          "rating": 4.5,
+          "review_count": 112,
+          "distance_m": 1375.73345589413,
+          "distance_km": 1.38,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 1,
+            "not_gym_score": 1,
+            "net_score": 0,
+            "gym_matches": [
+              "gym"
+            ],
+            "not_gym_matches": [
+              "yoga"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "sports_club",
+            "primary_type_name": "Sports Club",
+            "website": "http://www.windsurfsantapola.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Club_Windsurf_Santa_Pola_1_ATCDNfXzmhz16UY_5ZRn.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Club_Windsurf_Santa_Pola_2_ATCDNfUsyngaS854-p1O.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Club_Windsurf_Santa_Pola_3_ATCDNfWLMF22r5Rjaml0.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Club_Windsurf_Santa_Pola_4_ATCDNfUKrcwoUrF8vjdw.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Club_Windsurf_Santa_Pola_5_ATCDNfX-AUm7iK2JkT9o.jpg"
+          ]
+        }
+      ],
+      "average_rating": 4.7,
+      "good_gyms_count": 5,
+      "closest_competitor": {
+        "name": "Gimnàs Manhattan",
+        "rating": 4.9,
+        "review_count": 68,
+        "distance_m": 334.6326384642714,
+        "distance_km": 0.33,
+        "category": "direct_competitor",
+        "confidence": 100,
+        "is_real_competition": true,
+        "analysis": {
+          "category": "direct_competitor",
+          "confidence": 100,
+          "gym_score": 48,
+          "not_gym_score": 0,
+          "net_score": 48,
+          "gym_matches": [
+            "máquinas",
+            "maquinas",
+            "rack",
+            "web:maquinas",
+            "web:máquinas"
+          ],
+          "not_gym_matches": [],
+          "review_count": 5,
+          "has_website_data": true,
+          "primary_type": "gym",
+          "primary_type_name": "Gym",
+          "website": "https://gimnasios.fitness/es/i/6311-gimnasio-manhattan/",
+          "has_editorial": false
+        },
+        "photo_paths": [
+          "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_1_ATCDNfU9AULNA-fblbP7.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_2_ATCDNfWDomg0qqx0IOkr.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_3_ATCDNfXwMnVtu32MC3GV.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_4_ATCDNfXsK7-RIT527uee.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Gimn_s_Manhattan_5_ATCDNfW1w7CVOKI_I8k6.jpg"
+        ]
+      },
+      "avg_distance_m": 740.2036861079625,
+      "population_estimate": 25000,
+      "people_per_gym": 5000,
+      "market_potential": 50,
+      "saturation": "medium",
+      "filtering_explanation": [
+        "Von 20 Einträgen: 5 echte Gyms, 4 möglich, 11 ausgeschlossen",
+        "Nächstes Gym: Gimnàs Manhattan (0.33km)"
+      ],
+      "count": 5
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 50,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 1,
+      "parking_count": 20,
+      "accessibility_score": 100,
+      "transport_types": [
+        "Santa Pola"
+      ]
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 3,
+        "10min_reach": 15,
+        "15min_reach": 33,
+        "estimated_population_10min": 2925,
+        "coverage_percentage": 5.2,
+        "average_time": 28.1
+      },
+      "driving": {
+        "5min_reach": 34,
+        "10min_reach": 71,
+        "15min_reach": 72,
+        "estimated_population_10min": 55380
+      },
+      "score": 0
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Spanien",
+          "price": 2025,
+          "size": 250,
+          "price_per_m2": 8.1,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Spanien",
+          "price": 2565,
+          "size": 300,
+          "price_per_m2": 8.55,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Spanien",
+          "price": 3150,
+          "size": 350,
+          "price_per_m2": 9.0,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Spanien",
+          "price": 3780,
+          "size": 400,
+          "price_per_m2": 9.45,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Spanien",
+          "price": 4950,
+          "size": 500,
+          "price_per_m2": 9.9,
+          "location": "Spanien",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 9.0,
+      "monthly_estimate_350m2": 3150,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "web_demographics": {
+      "source": "web_search_pending",
+      "query_es": "Spain Murcia demografia poblacion renta ine",
+      "query_en": "Spain Murcia population demographics income",
+      "status": "Run manually after analysis"
+    },
+    "coordinates": {
+      "lat": 38.1965614,
+      "lng": -0.5612438
+    }
+  },
+  "score": {
+    "total_score": 66.4,
+    "individual_scores": {
+      "competition": 44.0,
+      "accessibility": 100,
+      "reachability": 84.0,
+      "rental": 50
+    },
+    "rating": "🟡 GUT",
+    "recommendation": "Guter Standort. Detailprüfung empfohlen.",
+    "risk_factors": [
+      "Hohe Konkurrenz (5 echte Gyms im Umkreis)"
+    ],
+    "opportunities": [
+      "Gute Parksituation (20 Parkplätze)",
+      "Gute Erreichbarkeit (ÖPNV + Parken)",
+      "Großes Auto-Einzugsgebiet: 55,380 in 10min"
+    ]
+  }
+}

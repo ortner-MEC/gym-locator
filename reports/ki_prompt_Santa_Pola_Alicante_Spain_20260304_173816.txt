@@ -1,0 +1,68 @@
+DU BIST EIN EXPERTE FÜR FITNESS-STUDIO-STANDORTE IN SPANIEN. Gib ein professionelles Gutachten ab.
+
+=== DEMOGRAFIE-DATEN ===
+INE-Daten: Nicht verfügbar
+Web-Recherche: Nicht verfügbar
+
+
+=== STANDORT ===
+Adresse: Santa Pola, Alicante, Spain
+Koordinaten: 38.1965614, -0.5612438
+
+=== KONKURRENZANALYSE ===
+Gefundene Gyms: 20
+Echte Konkurrenten: 5
+Details:  - Gimnàs Manhattan (4.9★, 0.33km, direct_competitor)
+  - Gym Noray (4.6★, 0.53km, direct_competitor)
+  - VLC Fitness (5★, 0.7km, direct_competitor)
+  - Marsport Gym & Yoga (4.7★, 0.76km, direct_competitor)
+  - GYM POLAMAX (4.4★, 1.37km, direct_competitor)
+
+Nächster Konkurrent: Gimnàs Manhattan (0.33km)
+
+Markt-Metriken:
+- Einwohner pro Gym: 5000
+- Marktpotenzial: 50/100
+- Marktsättigung: medium
+
+=== REICHWEITE (FAHRZEIT-ISOCHRONEN) ===
+Zu Fuß (10min): 2,925 Menschen (15 Zonen)
+Mit Auto (10min): 55,380 Menschen (71 Zonen)
+
+=== MIETMARKT ===
+Durchschnitt: 9.0€/m²
+Schätzung 350m²: 3150€/Monat
+Bewertung: 🟡 Moderat
+
+=== ALGORITHMUS-SCORING ===
+Gesamtpunktzahl: 66.4/100
+Einzelscores:
+- Konkurrenz: 44.0/100
+- Erreichbarkeit: 100/100
+- Reichweite: 84.0/100
+- Mietkosten: 50/100
+
+=== DEINE AUFGABE ===
+Gib eine PROFESSIONELLE BEWERTUNG (Skala 0-100) mit Begründung:
+
+1. **Gesamtbewertung (0-100):** Eine konkrete Zahl basierend auf allen Faktoren
+   - 90-100: Herausragend, sofortiger Go
+   - 80-89: Sehr gut, klare Empfehlung  
+   - 65-79: Gut, aber mit Risiken/Anpassungen
+   - 50-64: Durchschnitt, nur mit Spezialstrategie
+   - 0-49: Abgelehnt, zu viele rote Fahnen
+
+2. **Begründung (3-4 Sätze):** Warum diese Zahl? Welche Faktoren wie gewichten?
+
+3. **Haupt-Risiken (1-2 Punkte):** Was könnte schiefgehen?
+
+4. **Haupt-Chancen (1-2 Punkte):** Wo liegt das Potenzial?
+
+5. **Strategie-Empfehlung (1 Satz):** Konkrete Handlungsempfehlung
+
+Antworte in DEUTSCH. Format:
+**Bewertung: [Zahl]/100**
+**Begründung:** [Text]
+**Risiken:** [Text]
+**Chancen:** [Text]  
+**Strategie:** [Text]

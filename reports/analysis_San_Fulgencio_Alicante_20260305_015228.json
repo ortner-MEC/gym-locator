@@ -1,0 +1,140 @@
+{
+  "address": "San Fulgencio, Alicante, Spain",
+  "timestamp": "2026-03-05T01:52:28.478875",
+  "note": "Manual analysis - Google Places API key expired. Data sourced from web research.",
+  "analysis": {
+    "competition": {
+      "count": 4,
+      "competitors": [
+        {
+          "name": "Lamari GYM",
+          "type": "boutique_fitness",
+          "location": "Centro Comercial Bahía de las Dunas, Calle Mar Mediterráneo, 03177 San Fulgencio",
+          "website": "https://lamarigym.com",
+          "description": "Small group training studio, 200m², sessions 2-3x/week, 55min planned sessions. Boutique-style, not a full gym.",
+          "size": "small",
+          "threat_level": "low"
+        },
+        {
+          "name": "Quesada Fitness GYM",
+          "type": "full_gym",
+          "location": "Ciudad Quesada (Rojales, ~5km from San Fulgencio center)",
+          "website": "https://quesadafitness.com",
+          "description": "Full 3-story gym with weights, cardio, studios, kickboxing/boxing club, juice bar, sauna. 270m² floor. Very active community (competitions, international events). Personal training €25/hr. Inductions €10.",
+          "rating": "highly_rated",
+          "size": "large",
+          "threat_level": "high"
+        },
+        {
+          "name": "CrossFit Dolores",
+          "type": "crossfit_box",
+          "location": "Carretera Dolores-San Fulgencio km 5, Dolores, 03150",
+          "website": "https://www.crossfit.com/gym/25374/crossfit-dolores",
+          "description": "Affiliated CrossFit box on the road between Dolores and San Fulgencio.",
+          "size": "medium",
+          "threat_level": "medium"
+        },
+        {
+          "name": "La Marina Camping Resort Gym",
+          "type": "resort_gym",
+          "location": "Camping La Marina, La Marina",
+          "website": "https://www.samay.com/en/la-marina/facilities/",
+          "description": "Resort gym with 90m² studio, cycling, aerobics, Zumba etc. Primarily for resort guests.",
+          "size": "small",
+          "threat_level": "very_low"
+        }
+      ],
+      "summary": "Very low local competition. Only 1 boutique studio IN San Fulgencio itself (Lamari GYM). The main competitor is Quesada Fitness in Ciudad Quesada (~5km), which is large and well-established. CrossFit Dolores is niche. Big opportunity gap for a full-service gym directly in San Fulgencio."
+    },
+    "demographics": {
+      "population_2025": 9906,
+      "area_km2": 19.75,
+      "density_per_km2": 501,
+      "age_distribution": {
+        "0_17": 985,
+        "18_64": 4677,
+        "65_plus": 4244
+      },
+      "citizenship": {
+        "spanish": 3290,
+        "eu": 2437,
+        "europe_rest": 3527,
+        "africa": 300,
+        "america": 203,
+        "asia_oceania_stateless": 149
+      },
+      "foreign_percentage": 66.8,
+      "key_insight": "77% foreign origin (2011 census), still ~67% non-Spanish (2025). Dominated by British/Northern European retirees. Large 65+ population (42.8%). Working age 18-64 is 47.2%. Very expat-heavy community.",
+      "gym_relevant_age_18_64": 4677,
+      "gym_relevant_percentage": 47.2,
+      "seniors_65_plus_percentage": 42.8
+    },
+    "accessibility": {
+      "transport": "Limited public transport. Car-dependent area. Main access via CV-860 and CV-855.",
+      "parking": "Generally easy - suburban/rural area with ample parking",
+      "nearby_areas": [
+        "La Marina (urbanization)",
+        "Ciudad Quesada (~5km)",
+        "Rojales (~4km)",
+        "Dolores (~5km)",
+        "Guardamar del Segura (~7km)"
+      ],
+      "catchment_population_estimate": "25,000-35,000 (including La Marina, parts of Rojales/Quesada)"
+    },
+    "travel_analysis": {
+      "note": "Isochrone API not available (API key expired). Estimated travel times.",
+      "driving_5min_radius": [
+        "San Fulgencio center",
+        "La Marina urbanization",
+        "Parts of Dolores"
+      ],
+      "driving_10min_radius": [
+        "Ciudad Quesada",
+        "Rojales",
+        "Dolores",
+        "Daya Nueva"
+      ],
+      "driving_15min_radius": [
+        "Guardamar del Segura",
+        "Benijófar",
+        "Algorfa",
+        "Almoradí"
+      ],
+      "walking_limited": "Very car-dependent area. Walking catchment minimal."
+    },
+    "coordinates": {
+      "lat": 38.1081,
+      "lng": -0.7961
+    },
+    "rental_market": {
+      "note": "No Idealista/Fotocasa API available. San Fulgencio is an affordable area with mostly residential properties, many owned by expats."
+    }
+  },
+  "score": {
+    "total_score": 68.0,
+    "individual_scores": {
+      "competition": 85,
+      "demographics": 45,
+      "accessibility": 60,
+      "market_saturation": 90,
+      "reachability": 50
+    },
+    "rating": "🟡 MODERATE - mit Potenzial",
+    "recommendation": "Interessanter Standort mit klarer Marktlücke, aber Zielgruppen-Risiken.",
+    "risk_factors": [
+      "Sehr hoher Anteil 65+ (42.8%) - weniger typische Gym-Zielgruppe",
+      "Expat-Community dominiert - saisonale Schwankungen möglich",
+      "Auto-abhängig - kein ÖPNV-Vorteil",
+      "Quesada Fitness ist ein starker, etablierter Wettbewerber in 5km Entfernung",
+      "Kleine Gesamtbevölkerung (~10k)"
+    ],
+    "opportunities": [
+      "KEINE echte Gym-Konkurrenz direkt IN San Fulgencio (nur 1 Boutique-Studio)",
+      "Marktlücke: Kein vollwertiges Fitnessstudio im Ort",
+      "Einzugsgebiet 25-35k durch La Marina + umliegende Orte",
+      "Senioren-Fitness als Nische (Silver Fitness, Rehabilitation, Mobility)",
+      "Expat-Community schätzt englischsprachige Services",
+      "Potenzial für hybrides Konzept: Gym + Wellness/Physio für ältere Zielgruppe"
+    ]
+  }
+}

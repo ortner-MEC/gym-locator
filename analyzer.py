@@ -167,6 +167,9 @@ def analyze_location(address: str, radius: int = DEFAULT_RADIUS_METERS):
     reporter.generate_console_report(address, analysis_data, score_data)
     reporter.save_json_report(address, analysis_data, score_data)
     
+    # NEW: Generate Verification Checklist
+    reporter.save_verification_checklist(address, analysis_data)
+    
     # Generate AI evaluation prompt
     print("\n🤖 Bereite KI-Gutachten vor...")
     ki_prompt = generate_ki_evaluation_prompt(address, analysis_data, score_data)

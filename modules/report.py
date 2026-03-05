@@ -214,3 +214,70 @@ class ReportGenerator:
             f.write(prompt)
         
         return filename
+        
+    def save_verification_checklist(self, address: str, analysis_data: Dict) -> str:
+        """Save a markdown file with quick links for manual verification."""
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        safe_address = address.replace(' ', '_').replace(',', '')[:30]
+        filename = f"{OUTPUT_DIR}/verification_{safe_address}_{timestamp}.md"
+        
+        city = address.split(',')[0].strip()
+        coords = analysis_data.get('coordinates', {})
+        lat, lng = coords.get('lat'), coords.get('lng')
+        
+        md_content = f"# Manuelle Überprüfung: {address}\n\n"
+        
+        if lat and lng:
+            md_content += f"## 📍 Standort\n"
+            md_content += f"- [Google Maps (Standort)](https://www.google.com/maps/search/?api=1&query={lat},{lng})\n\n"
+        
+        md_content += f"## 🏙️ Stadt-Recherche\n"
+        md_content += f"- [Wikipedia (DE)](https://de.wikipedia.org/w/index.php?search={city.replace(' ', '+')})\n"
+        md_content += f"- [Wikipedia (ES)](https://es.wikipedia.org/w/index.php?search={city.replace(' ', '+')})\n"
+        md_content += f"- [Fotocasa (Gewerbeimmobilien)](https://www.fotocasa.es/es/alquiler/locales/{city.replace(' ', '-').lower()}/todas-las-zonas/l)\n"
+        md_content += f"- [Idealista (Gewerbeimmobilien)](https://www.idealista.com/alquiler-locales/{city.replace(' ', '-').lower()}/)\n\n"
+        
+        comp = analysis_data.get('competition', {})
+        real_gyms = comp.get('real_competitors', [])
+        possible_gyms = comp.get('possible_competitors', [])
+        
+        md_content += f"## 🏋️ Konkurrenz (Echte Gyms)\n"
+        if not real_gyms:
+            md_content += "Keine echten Gyms gefunden.\n\n"
+        else:
+            for gym in real_gyms:
+                name = gym.get('name', 'Unbekannt')
+                dist = gym.get('distance_km', '?')
+                rating = gym.get('rating', '-')
+                reviews = gym.get('review_count', 0)
+                website = gym.get('analysis', {}).get('website') or gym.get('website', '')
+                
+                md_content += f"### {name}\n"
+                md_content += f"- **Distanz:** {dist} km | **Bewertung:** {rating}★ ({reviews})\n"
+                maps_query = f"{name} {city}".replace(' ', '+')
+                md_content += f"- [Google Maps Link](https://www.google.com/maps/search/?api=1&query={maps_query})\n"
+                if website:
+                    md_content += f"- [Website]({website})\n"
+                md_content += "\n"
+        
+        md_content += f"## 🤔 Mögliche Konkurrenz (Nische/CrossFit/Yoga)\n"
+        if not possible_gyms:
+            md_content += "Keine möglichen Konkurrenten gefunden.\n"
+        else:
+            for gym in possible_gyms[:5]:
+                name = gym.get('name', 'Unbekannt')
+                cat = gym.get('category', 'unknown')
+                website = gym.get('analysis', {}).get('website') or gym.get('website', '')
+                
+                md_content += f"### {name} ({cat})\n"
+                maps_query = f"{name} {city}".replace(' ', '+')
+                md_content += f"- [Google Maps Link](https://www.google.com/maps/search/?api=1&query={maps_query})\n"
+                if website:
+                    md_content += f"- [Website]({website})\n"
+                md_content += "\n"
+                
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(md_content)
+            
+        print(f"   ✅ Verifizierungs-Checkliste erstellt: {filename}")
+        return filename

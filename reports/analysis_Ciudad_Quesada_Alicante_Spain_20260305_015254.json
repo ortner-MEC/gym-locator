@@ -1,0 +1,544 @@
+{
+  "address": "Ciudad Quesada, Alicante, Spain",
+  "timestamp": "2026-03-05T01:52:54.840783",
+  "analysis": {
+    "competition": {
+      "total_found": 11,
+      "real_competitors": [
+        {
+          "name": "Quesada Fitness Gym",
+          "rating": 4.4,
+          "review_count": 243,
+          "distance_m": 307.44280696947385,
+          "distance_km": 0.31,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 38,
+            "not_gym_score": 10,
+            "net_score": 28,
+            "gym_matches": [
+              "máquinas",
+              "pesas",
+              "weights",
+              "web:máquinas",
+              "web:pesas"
+            ],
+            "not_gym_matches": [
+              "yoga",
+              "pilates",
+              "boxeo"
+            ],
+            "review_count": 5,
+            "has_website_data": true,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "http://quesadafitness.com/",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_1_ATCDNfXafl0slB_BA656.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_2_ATCDNfUa84flBWHpnWHE.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_3_ATCDNfU_3B27MJxx2DUl.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_4_ATCDNfXC1V1kq2hPLBSp.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_5_ATCDNfVCy1cFsdFcsNqM.jpg"
+          ]
+        },
+        {
+          "name": "Elite Fitness Quesada",
+          "rating": 4.1,
+          "review_count": 32,
+          "distance_m": 1619.0128708570826,
+          "distance_km": 1.62,
+          "category": "direct_competitor",
+          "confidence": 100,
+          "is_real_competition": true,
+          "analysis": {
+            "category": "direct_competitor",
+            "confidence": 100,
+            "gym_score": 15,
+            "not_gym_score": 0,
+            "net_score": 15,
+            "gym_matches": [
+              "weights",
+              "machines",
+              "gym",
+              "⭐free weights",
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Elite_Fitness_Quesada_1_ATCDNfXyGWNhaXGEADXJ.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Elite_Fitness_Quesada_2_ATCDNfXJ3kRCU-DmOoGM.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Elite_Fitness_Quesada_3_ATCDNfUXpH42WqnvA1ot.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Elite_Fitness_Quesada_4_ATCDNfXrxPDLEs2Yx_v9.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Elite_Fitness_Quesada_5_ATCDNfXeL7u2Y9xrCDbI.jpg"
+          ]
+        }
+      ],
+      "real_count": 2,
+      "possible_competitors": [
+        {
+          "name": "Calisthenics Park",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 829.8568699192314,
+          "distance_km": 0.83,
+          "category": "possible_competitor",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 90,
+            "gym_score": 5,
+            "not_gym_score": 1,
+            "net_score": 4,
+            "gym_matches": [
+              "web:strength"
+            ],
+            "not_gym_matches": [
+              "dance"
+            ],
+            "review_count": 0,
+            "has_website_data": true,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "https://skool.com/strong",
+            "has_editorial": false
+          },
+          "photo_paths": []
+        },
+        {
+          "name": "Outdoor 6",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 849.6282663970962,
+          "distance_km": 0.85,
+          "category": "possible_competitor",
+          "confidence": 20,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 20,
+            "gym_score": 3,
+            "not_gym_score": 0,
+            "net_score": 3,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 0,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Outdoor_6_1_ATCDNfXYEwrBWJsMWiCD.jpg"
+          ]
+        },
+        {
+          "name": "Small ourdoor gym",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 871.4753040180581,
+          "distance_km": 0.87,
+          "category": "possible_competitor",
+          "confidence": 20,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 20,
+            "gym_score": 6,
+            "not_gym_score": 0,
+            "net_score": 6,
+            "gym_matches": [
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 0,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Small_ourdoor_gym_1_ATCDNfV0vYgur2w5TSY-.jpg"
+          ]
+        },
+        {
+          "name": "Outdoor gym",
+          "rating": 0,
+          "review_count": 0,
+          "distance_m": 1218.7367884121659,
+          "distance_km": 1.22,
+          "category": "possible_competitor",
+          "confidence": 20,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "possible_competitor",
+            "confidence": 20,
+            "gym_score": 6,
+            "not_gym_score": 0,
+            "net_score": 6,
+            "gym_matches": [
+              "⭐name:gym/gimnasio/fitness"
+            ],
+            "not_gym_matches": [],
+            "review_count": 0,
+            "has_website_data": false,
+            "primary_type": "gym",
+            "primary_type_name": "Gym",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": []
+        }
+      ],
+      "not_competition": [
+        {
+          "name": "Skatepark",
+          "rating": 4.2,
+          "review_count": 22,
+          "distance_m": 826.0647027197919,
+          "distance_km": 0.83,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:skatepark"
+            ],
+            "review_count": 5,
+            "primary_type": "skateboard_park",
+            "primary_type_name": "Skatepark",
+            "website": "",
+            "has_editorial": false,
+            "has_website_data": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_1_ATCDNfVJwanBVyVweyH-.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_2_ATCDNfXcKbnN3iVHKv8n.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_3_ATCDNfUAnDqe9OANjGMG.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_4_ATCDNfUBule4GO3Qjx5x.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Skatepark_5_ATCDNfXLgrbJ2yT80ROh.jpg"
+          ]
+        },
+        {
+          "name": "Quesada Bowling, Ciudad Quesada, España",
+          "rating": 3.8,
+          "review_count": 18,
+          "distance_m": 1569.801432531624,
+          "distance_km": 1.57,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 0,
+            "not_gym_score": 0,
+            "net_score": 0,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "bowling_alley",
+            "primary_type_name": "Bowling Alley",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": []
+        },
+        {
+          "name": "Quesada Bowling",
+          "rating": 4.1,
+          "review_count": 341,
+          "distance_m": 1624.326245683302,
+          "distance_km": 1.62,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 0,
+            "not_gym_score": 0,
+            "net_score": 0,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 5,
+            "has_website_data": false,
+            "primary_type": "bowling_alley",
+            "primary_type_name": "Bowling Alley",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Bowling_1_ATCDNfUu0R1t0bKtd09r.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Bowling_2_ATCDNfU23URs-zSUY53z.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Bowling_3_ATCDNfX44FHH3I3xwcR_.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Bowling_4_ATCDNfU4tT_vtC19Gx73.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Bowling_5_ATCDNfV1zmL1JDGtm8sd.jpg"
+          ]
+        },
+        {
+          "name": "Campo las Naves Airsoft",
+          "rating": 4.7,
+          "review_count": 3,
+          "distance_m": 1759.463682518331,
+          "distance_km": 1.76,
+          "category": "unclear",
+          "confidence": 30,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "unclear",
+            "confidence": 30,
+            "gym_score": 0,
+            "not_gym_score": 0,
+            "net_score": 0,
+            "gym_matches": [],
+            "not_gym_matches": [],
+            "review_count": 3,
+            "has_website_data": false,
+            "primary_type": "adventure_sports_center",
+            "primary_type_name": "Adventure Sports Center",
+            "website": "",
+            "has_editorial": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Campo_las_Naves_Airsoft_1_ATCDNfXgJOtAUcQ4Bw-B.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Campo_las_Naves_Airsoft_2_ATCDNfWcEUg_tCUPrpL1.jpg"
+          ]
+        },
+        {
+          "name": "Pabellón Polideportivo Municipal Joaquín Garri",
+          "rating": 4.2,
+          "review_count": 163,
+          "distance_m": 1978.6483705130606,
+          "distance_km": 1.98,
+          "category": "not_competition",
+          "confidence": 90,
+          "is_real_competition": false,
+          "analysis": {
+            "category": "not_competition",
+            "confidence": 90,
+            "gym_score": 0,
+            "not_gym_score": 10,
+            "net_score": -10,
+            "gym_matches": [],
+            "not_gym_matches": [
+              "name:pabellón"
+            ],
+            "review_count": 5,
+            "primary_type": "sports_complex",
+            "primary_type_name": "Sports Complex",
+            "website": "",
+            "has_editorial": false,
+            "has_website_data": false
+          },
+          "photo_paths": [
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell_n_Polideportivo_Municip_ATCDNfV2O0_QSy8-DOt3.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell_n_Polideportivo_Municip_ATCDNfUlxvVTIrLi45XZ.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell_n_Polideportivo_Municip_ATCDNfXCzjJJlg4at-jc.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell_n_Polideportivo_Municip_ATCDNfVT7V8DtKiwFqOU.jpg",
+            "/Users/karl/workspace/gym-locator/modules/../photos/Pabell_n_Polideportivo_Municip_ATCDNfVB_DUDk_E-1-_f.jpg"
+          ]
+        }
+      ],
+      "average_rating": 4.2,
+      "good_gyms_count": 2,
+      "closest_competitor": {
+        "name": "Quesada Fitness Gym",
+        "rating": 4.4,
+        "review_count": 243,
+        "distance_m": 307.44280696947385,
+        "distance_km": 0.31,
+        "category": "direct_competitor",
+        "confidence": 100,
+        "is_real_competition": true,
+        "analysis": {
+          "category": "direct_competitor",
+          "confidence": 100,
+          "gym_score": 38,
+          "not_gym_score": 10,
+          "net_score": 28,
+          "gym_matches": [
+            "máquinas",
+            "pesas",
+            "weights",
+            "web:máquinas",
+            "web:pesas"
+          ],
+          "not_gym_matches": [
+            "yoga",
+            "pilates",
+            "boxeo"
+          ],
+          "review_count": 5,
+          "has_website_data": true,
+          "primary_type": "gym",
+          "primary_type_name": "Gym",
+          "website": "http://quesadafitness.com/",
+          "has_editorial": false
+        },
+        "photo_paths": [
+          "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_1_ATCDNfXafl0slB_BA656.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_2_ATCDNfUa84flBWHpnWHE.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_3_ATCDNfU_3B27MJxx2DUl.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_4_ATCDNfXC1V1kq2hPLBSp.jpg",
+          "/Users/karl/workspace/gym-locator/modules/../photos/Quesada_Fitness_Gym_5_ATCDNfVCy1cFsdFcsNqM.jpg"
+        ]
+      },
+      "avg_distance_m": 963.2278389132782,
+      "population_estimate": 25000,
+      "people_per_gym": 12500,
+      "market_potential": 85,
+      "saturation": "very_low",
+      "filtering_explanation": [
+        "Von 11 Einträgen: 2 echte Gyms, 4 möglich, 5 ausgeschlossen",
+        "Nächstes Gym: Quesada Fitness Gym (0.31km)"
+      ],
+      "count": 2
+    },
+    "demographics": {
+      "residential_count": 0,
+      "office_count": 0,
+      "young_count": 0,
+      "demographic_score": 50,
+      "primary_target": "residents"
+    },
+    "accessibility": {
+      "public_transport_count": 0,
+      "parking_count": 6,
+      "accessibility_score": 30,
+      "transport_types": []
+    },
+    "travel_analysis": {
+      "walking": {
+        "5min_reach": 1,
+        "10min_reach": 11,
+        "15min_reach": 27,
+        "estimated_population_10min": 2145,
+        "coverage_percentage": 3.8,
+        "average_time": 33.1
+      },
+      "driving": {
+        "5min_reach": 29,
+        "10min_reach": 65,
+        "15min_reach": 72,
+        "estimated_population_10min": 50700
+      },
+      "score": 0
+    },
+    "ine_demographics": {
+      "city": null,
+      "municipality_code": null,
+      "demographics": {},
+      "scores": {
+        "target_group_score": 0,
+        "purchasing_power_score": 0,
+        "market_size_score": 0,
+        "overall_demographic_score": 0
+      },
+      "data_source": "INE (not found)",
+      "year": 2026
+    },
+    "postal_code_data": null,
+    "rental_market": {
+      "available": true,
+      "properties_found": 5,
+      "suitable_properties": [
+        {
+          "title": "Local comercial 250m² - Spanien",
+          "price": 2025,
+          "size": 250,
+          "price_per_m2": 8.1,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 300m² - Spanien",
+          "price": 2565,
+          "size": 300,
+          "price_per_m2": 8.55,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 350m² - Spanien",
+          "price": 3150,
+          "size": 350,
+          "price_per_m2": 9.0,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 400m² - Spanien",
+          "price": 3780,
+          "size": 400,
+          "price_per_m2": 9.45,
+          "location": "Spanien",
+          "is_estimated": true
+        },
+        {
+          "title": "Local comercial 500m² - Spanien",
+          "price": 4950,
+          "size": 500,
+          "price_per_m2": 9.9,
+          "location": "Spanien",
+          "is_estimated": true
+        }
+      ],
+      "average_price_per_m2": 9.0,
+      "monthly_estimate_350m2": 3150,
+      "market_score": 80,
+      "market_rating": "🟡 Moderat",
+      "is_estimated": true,
+      "note": "Geschätzte Werte basierend auf Marktdaten. Für exakte Preise: Fotocasa API-Zugang beantragen."
+    },
+    "web_demographics": {
+      "source": "web_search_pending",
+      "query_es": "Spain Murcia demografia poblacion renta ine",
+      "query_en": "Spain Murcia population demographics income",
+      "status": "Run manually after analysis"
+    },
+    "coordinates": {
+      "lat": 38.0689264,
+      "lng": -0.7129006999999999
+    }
+  },
+  "score": {
+    "total_score": 65.7,
+    "individual_scores": {
+      "competition": 82.0,
+      "accessibility": 30,
+      "reachability": 84.0,
+      "rental": 50
+    },
+    "rating": "🟡 GUT",
+    "recommendation": "Guter Standort. Detailprüfung empfohlen.",
+    "risk_factors": [],
+    "opportunities": [
+      "Wenig Konkurrenz: Nur 2 echte Gyms",
+      "Unterversorgter Markt: 12500 Einwohner/Gym",
+      "Großes Auto-Einzugsgebiet: 50,700 in 10min"
+    ]
+  }
+}
